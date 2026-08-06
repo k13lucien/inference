@@ -1,20 +1,39 @@
-import { GearIcon } from "./GearIcon";
+import { Gear } from "./GearIcon";
 import { Reveal } from "./Reveal";
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-[140px] pb-[120px] max-[560px]:pt-20 max-[560px]:pb-16">
+    <section
+      id="top"
+      className="relative overflow-hidden pt-[140px] pb-[120px] max-[560px]:pt-20 max-[560px]:pb-16"
+    >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 right-[-90px] hidden -translate-y-1/2 items-center md:flex"
+        className="pointer-events-none absolute top-1/2 right-[-140px] hidden -translate-y-1/2 md:block"
         style={{
           maskImage: "linear-gradient(to left, black 30%, transparent 88%)",
           WebkitMaskImage: "linear-gradient(to left, black 30%, transparent 88%)",
         }}
       >
-        <GearIcon size={340} teeth={18} duration={26} opacity={0.28} className="-mr-9" />
-        <GearIcon size={215} teeth={14} duration={17} reverse opacity={0.24} className="-mr-6" />
-        <GearIcon size={130} teeth={10} duration={11} opacity={0.2} />
+        <svg
+          viewBox="60 90 470 300"
+          width="720"
+          height="460"
+          className="max-[1180px]:w-[560px] max-[1180px]:h-[360px]"
+        >
+          <Gear teeth={26} pitch={104} cx={200} cy={240} duration={26} opacity={0.32} />
+          <Gear
+            teeth={17}
+            pitch={68}
+            cx={341}
+            cy={141}
+            duration={17}
+            reverse
+            opacity={0.28}
+            phase={10}
+          />
+          <Gear teeth={11} pitch={44} cx={443} cy={188} duration={11} opacity={0.22} phase={16} />
+        </svg>
       </div>
 
       <div className="shell relative">
