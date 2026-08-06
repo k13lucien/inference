@@ -9,7 +9,7 @@ export function Hero() {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 right-[-140px] hidden -translate-y-1/2 md:block"
+        className="pointer-events-none absolute top-1/2 right-[-40px] hidden -translate-y-1/2 md:block"
         style={{
           maskImage: "linear-gradient(to left, black 30%, transparent 88%)",
           WebkitMaskImage: "linear-gradient(to left, black 30%, transparent 88%)",
