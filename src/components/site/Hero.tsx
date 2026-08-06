@@ -21,18 +21,36 @@ export function Hero() {
           height="460"
           className="max-[1180px]:w-[560px] max-[1180px]:h-[360px]"
         >
-          <Gear teeth={26} pitch={104} cx={200} cy={240} duration={26} opacity={0.32} />
+          {/* Entraxes = somme des rayons primitifs, phases calculées pour un engrènement exact. */}
+          <Gear
+            teeth={26}
+            pitch={104}
+            cx={200}
+            cy={240}
+            duration={26}
+            opacity={0.32}
+            phase={-38.18}
+          />
           <Gear
             teeth={17}
             pitch={68}
-            cx={341}
-            cy={141}
+            cx={340.9}
+            cy={141.3}
             duration={17}
             reverse
             opacity={0.28}
-            phase={10}
+            phase={129.54}
           />
-          <Gear teeth={11} pitch={44} cx={443} cy={188} duration={11} opacity={0.22} phase={16} />
+          <Gear
+            teeth={11}
+            pitch={44}
+            cx={439.3}
+            cy={194.8}
+            duration={11}
+            opacity={0.22}
+            phase={184.64}
+          />
+
         </svg>
       </div>
 
