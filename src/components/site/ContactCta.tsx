@@ -1,19 +1,22 @@
 import { useState } from "react";
+
+import { useI18n } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 
 type Errors = { nom?: string; email?: string; message?: string };
 
 export function ContactCta() {
+  const { t } = useI18n();
   const [values, setValues] = useState({ nom: "", email: "", message: "" });
   const [errors, setErrors] = useState<Errors>({});
   const [touched, setTouched] = useState(false);
 
   const validate = (v: typeof values): Errors => {
     const e: Errors = {};
-    if (!v.nom.trim()) e.nom = "Ce champ est requis.";
-    if (!v.email.trim()) e.email = "Ce champ est requis.";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email)) e.email = "Adresse email invalide.";
-    if (!v.message.trim()) e.message = "Ce champ est requis.";
+    if (!v.nom.trim()) e.nom = t.contact.required;
+    if (!v.email.trim()) e.email = t.contact.required;
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email)) e.email = t.contact.invalidEmail;
+    if (!v.message.trim()) e.message = t.contact.required;
     return e;
   };
 
@@ -36,7 +39,7 @@ export function ContactCta() {
       <div className="shell flex flex-col gap-14 min-[861px]:flex-row min-[861px]:items-start min-[861px]:justify-between">
         <Reveal className="max-w-[440px]">
           <h2 className="font-serif font-semibold leading-[1.15] text-ink text-[clamp(30px,3.4vw,42px)]">
-            Parlons de votre problématique avant de parler solution.
+            {t.contact.title}
           </h2>
         </Reveal>
 
@@ -44,13 +47,13 @@ export function ContactCta() {
           <form onSubmit={onSubmit} noValidate className="space-y-7">
             <div>
               <label htmlFor="nom" className="sr-only">
-                Nom
+                {t.contact.name}
               </label>
               <input
                 id="nom"
                 name="nom"
                 className={field}
-                placeholder="Nom"
+                placeholder={t.contact.name}
                 value={values.nom}
                 onChange={(e) => setValues({ ...values, nom: e.target.value })}
                 aria-invalid={Boolean(errors.nom)}
@@ -62,14 +65,14 @@ export function ContactCta() {
 
             <div>
               <label htmlFor="email" className="sr-only">
-                Email professionnel
+                {t.contact.email}
               </label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 className={field}
-                placeholder="Email professionnel"
+                placeholder={t.contact.email}
                 value={values.email}
                 onChange={(e) => setValues({ ...values, email: e.target.value })}
                 aria-invalid={Boolean(errors.email)}
@@ -81,14 +84,14 @@ export function ContactCta() {
 
             <div>
               <label htmlFor="message" className="sr-only">
-                Votre contexte, en quelques lignes
+                {t.contact.message}
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={3}
                 className={`${field} resize-none`}
-                placeholder="Votre contexte, en quelques lignes"
+                placeholder={t.contact.message}
                 value={values.message}
                 onChange={(e) => setValues({ ...values, message: e.target.value })}
                 aria-invalid={Boolean(errors.message)}
@@ -102,7 +105,7 @@ export function ContactCta() {
               type="submit"
               className="bg-ink px-6 py-3.5 font-sans text-[14px] font-medium text-soft-white transition-opacity hover:opacity-85"
             >
-              Envoyer
+              {t.contact.submit}
             </button>
           </form>
         </Reveal>
