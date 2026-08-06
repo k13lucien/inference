@@ -10,6 +10,9 @@ import { Proof } from "@/components/site/Proof";
 import { Positioning } from "@/components/site/Positioning";
 import { ContactCta } from "@/components/site/ContactCta";
 import { Footer } from "@/components/site/Footer";
+import { I18nProvider } from "@/lib/i18n";
+import { ThemeProvider } from "@/lib/theme";
+
 
 const title = "Inference · Conseil & ingénierie logicielle";
 const description =
