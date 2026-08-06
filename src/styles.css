@@ -156,7 +156,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  svg[style*="gear-spin"] {
+  [style*="gear-spin"] {
     animation: none !important;
   }
 }
