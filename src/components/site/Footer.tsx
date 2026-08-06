@@ -1,4 +1,8 @@
+import { useI18n } from "@/lib/i18n";
+
 export function Footer() {
+  const { t } = useI18n();
+
   return (
     <footer className="border-t border-light-gray py-16">
       <div className="shell">
@@ -8,29 +12,28 @@ export function Footer() {
               Inference <span className="text-text-muted">·</span> Your Tech Partner
             </p>
             <p className="mt-4 max-w-[320px] font-sans text-[14px] leading-[1.7] text-text-body">
-              Decode the Complex. Conseil et ingénierie logicielle pour organisations en évolution
-              numérique.
+              {t.footer.tagline}
             </p>
           </div>
 
-          <nav aria-label="Navigation de pied de page">
+          <nav aria-label={t.footer.footerNav}>
             <h2 className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-blue">
-              Navigation
+              {t.footer.navTitle}
             </h2>
             <ul className="mt-5 space-y-3 font-sans text-[14px] text-text-secondary">
               <li>
                 <a href="#qui-sommes-nous" className="hover:text-ink">
-                  Qui sommes-nous
+                  {t.nav.about}
                 </a>
               </li>
               <li>
                 <a href="#offres" className="hover:text-ink">
-                  Offres
+                  {t.nav.offers}
                 </a>
               </li>
               <li>
                 <a href="#pour-qui" className="hover:text-ink">
-                  Pour qui
+                  {t.nav.audience}
                 </a>
               </li>
             </ul>
@@ -38,7 +41,7 @@ export function Footer() {
 
           <div>
             <h2 className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-blue">
-              Contact
+              {t.footer.contactTitle}
             </h2>
             <ul className="mt-5 space-y-3 font-sans text-[14px] text-text-secondary">
               <li>
@@ -58,7 +61,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="#contact" className="hover:text-ink">
-                  Discuter d'un projet
+                  {t.footer.discuss}
                 </a>
               </li>
             </ul>
@@ -66,9 +69,9 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-light-gray pt-6 font-sans text-[13px] text-text-muted">
-          <p>© 2026 Inference</p>
+          <p>{t.footer.rights}</p>
           <a href="#top" className="hover:text-ink">
-            Mentions légales
+            {t.footer.legal}
           </a>
         </div>
       </div>
