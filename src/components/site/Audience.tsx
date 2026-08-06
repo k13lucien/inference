@@ -1,34 +1,22 @@
+import { useI18n } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 import { SectionLabel } from "./SectionLabel";
 
-const ITEMS = [
-  {
-    title: "PME en croissance",
-    body: "Structuration des outils internes avant qu'ils ne deviennent un frein.",
-  },
-  {
-    title: "Organisations en transformation",
-    body: "Refonte de systèmes existants devenus inadaptés aux processus réels.",
-  },
-  {
-    title: "Équipes techniques internes",
-    body: "Renfort de cadrage et d'expertise sur des projets complexes ou critiques.",
-  },
-];
-
 export function Audience() {
+  const { t } = useI18n();
+
   return (
     <section id="pour-qui" className="border-t border-light-gray py-[100px]">
       <div className="shell">
         <Reveal className="max-w-[560px]">
-          <SectionLabel>Pour qui</SectionLabel>
+          <SectionLabel>{t.audience.label}</SectionLabel>
           <h2 className="font-serif font-semibold leading-[1.15] text-ink text-[clamp(30px,3.4vw,42px)]">
-            Des organisations en phase d'évolution numérique.
+            {t.audience.title}
           </h2>
         </Reveal>
 
         <ul className="mt-14">
-          {ITEMS.map((item, i) => (
+          {t.audience.items.map((item, i) => (
             <Reveal
               as="li"
               key={item.title}
