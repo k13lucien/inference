@@ -1,7 +1,10 @@
+import { useI18n } from "@/lib/i18n";
 import { Gear } from "./GearIcon";
 import { Reveal } from "./Reveal";
 
 export function Hero() {
+  const { t } = useI18n();
+
   return (
     <section
       id="top"
@@ -50,31 +53,29 @@ export function Hero() {
             opacity={0.22}
             phase={184.64}
           />
-
         </svg>
       </div>
 
       <div className="shell relative">
         <Reveal className="max-w-[640px]">
           <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-blue">
-            Conseil &amp; ingénierie logicielle
+            {t.hero.eyebrow}
           </p>
           <h1 className="mt-8 font-serif font-bold leading-[1.05] tracking-[-0.01em] text-ink text-[clamp(40px,6vw,72px)]">
-            Comprendre avant de <span className="text-blue">construire</span>.
+            {t.hero.titleStart}
+            <span className="text-blue">{t.hero.titleAccent}</span>.
           </h1>
           <p className="mt-8 max-w-[540px] font-sans text-[16px] leading-[1.7] text-text-body">
-            Inference accompagne les organisations dans la compréhension de leurs problématiques et
-            la conception de solutions numériques durables — pas seulement dans leur exécution
-            technique.
+            {t.hero.lead}
           </p>
           <div className="mt-10 flex items-center gap-6">
             <a
               href="#contact"
               className="bg-ink px-6 py-3.5 font-sans text-[14px] font-medium text-soft-white transition-opacity hover:opacity-85"
             >
-              Discuter de votre projet
+              {t.hero.cta}
             </a>
-            <span className="font-sans text-[13px] text-text-muted">Réponse sous 48h</span>
+            <span className="font-sans text-[13px] text-text-muted">{t.hero.note}</span>
           </div>
         </Reveal>
       </div>

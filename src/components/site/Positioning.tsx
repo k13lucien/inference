@@ -1,7 +1,10 @@
+import { useI18n } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 import { SectionLabel } from "./SectionLabel";
 
 export function Positioning() {
+  const { t } = useI18n();
+
   return (
     <section
       id="qui-sommes-nous"
@@ -18,14 +21,13 @@ export function Positioning() {
 
       <div className="shell relative">
         <Reveal className="max-w-[820px]">
-          <SectionLabel tone="dark">Positionnement</SectionLabel>
+          <SectionLabel tone="dark">{t.positioning.label}</SectionLabel>
           <h2 className="font-serif font-bold leading-[1.1] text-[clamp(32px,5vw,56px)]">
-            Nous ne vendons pas des outils.{" "}
-            <span className="text-gold">Nous décodons des problèmes.</span>
+            {t.positioning.titleStart}
+            <span className="text-gold">{t.positioning.titleAccent}</span>
           </h2>
           <p className="mt-9 max-w-[620px] font-sans text-[15.5px] leading-[1.75] text-soft-gray">
-            La confiance ne vient pas de la promesse technologique, mais de la précision du
-            diagnostic et de la maîtrise de son exécution.
+            {t.positioning.body}
           </p>
         </Reveal>
       </div>
