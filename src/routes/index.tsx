@@ -31,19 +31,22 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <Problem />
-        <Services />
-        <Method />
-        <Audience />
-        <Proof />
-        <Positioning />
-        <ContactCta />
-      </main>
-      <Footer />
-    </>
+    <ThemeProvider>
+      <I18nProvider>
+        <Header />
+        <main>
+          <Hero />
+          <Problem />
+          <Services />
+          <Method />
+          <Audience />
+          <Proof />
+          <Positioning />
+          <ContactCta />
+        </main>
+        <Footer />
+      </I18nProvider>
+    </ThemeProvider>
   );
 }
+
