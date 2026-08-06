@@ -19,24 +19,52 @@
  */
 
 :root {
-  /* Couleurs — fond clair */
-  --color-bg-light: #fafaf7;
-  --color-ink: #111111;
+  /* Palette source — thème clair */
+  --ds-bg-light: #fafaf7;
+  --ds-ink: #111111;
+  --ds-bg-dark: #111111;
+  --ds-soft-white: #fafaf7;
+  --ds-blue: #2c63c0; /* accent du fond clair */
+  --ds-gold: #c9a227; /* accent du fond sombre */
+  --ds-light-gray: #d8d8d8;
+  --ds-soft-gray: #cfcfcf;
+  --ds-text-secondary: #333333;
+  --ds-text-muted: #666666;
+  --ds-text-body: #444444;
+}
 
-  /* Couleurs — fond sombre */
-  --color-bg-dark: #111111;
-  --color-soft-white: #fafaf7;
+/*
+ * Thème sombre : les rôles s'inversent, jamais les règles.
+ * Le fond principal devient sombre -> son accent devient l'or.
+ * La section de contraste devient claire -> son accent devient le bleu.
+ */
+.dark {
+  --ds-bg-light: #111111;
+  --ds-ink: #fafaf7;
+  --ds-bg-dark: #fafaf7;
+  --ds-soft-white: #111111;
+  --ds-blue: #c9a227;
+  --ds-gold: #2c63c0;
+  --ds-light-gray: #2b2b2b;
+  --ds-soft-gray: #4a4a4a;
+  --ds-text-secondary: #d6d6d2;
+  --ds-text-muted: #9a9a95;
+  --ds-text-body: #c2c2bd;
+}
 
-  /* Accents */
-  --color-blue: #2c63c0; /* usage exclusif fond clair */
-  --color-gold: #c9a227; /* usage exclusif fond sombre */
-
-  /* Neutres */
-  --color-light-gray: #d8d8d8; /* bordures fond clair */
-  --color-soft-gray: #cfcfcf; /* texte secondaire fond sombre */
-  --color-text-secondary: #333333;
-  --color-text-muted: #666666;
-  --color-text-body: #444444;
+:root {
+  /* Alias consommés directement en CSS/SVG */
+  --color-bg-light: var(--ds-bg-light);
+  --color-ink: var(--ds-ink);
+  --color-bg-dark: var(--ds-bg-dark);
+  --color-soft-white: var(--ds-soft-white);
+  --color-blue: var(--ds-blue);
+  --color-gold: var(--ds-gold);
+  --color-light-gray: var(--ds-light-gray);
+  --color-soft-gray: var(--ds-soft-gray);
+  --color-text-secondary: var(--ds-text-secondary);
+  --color-text-muted: var(--ds-text-muted);
+  --color-text-body: var(--ds-text-body);
 
   /* Typographie */
   --font-serif: "Cormorant Garamond", serif;
@@ -68,17 +96,17 @@
 
 @theme inline {
   /* Exposition des tokens ci-dessus en utilitaires Tailwind. */
-  --color-bg-light: #fafaf7;
-  --color-ink: #111111;
-  --color-bg-dark: #111111;
-  --color-soft-white: #fafaf7;
-  --color-blue: #2c63c0;
-  --color-gold: #c9a227;
-  --color-light-gray: #d8d8d8;
-  --color-soft-gray: #cfcfcf;
-  --color-text-secondary: #333333;
-  --color-text-muted: #666666;
-  --color-text-body: #444444;
+  --color-bg-light: var(--ds-bg-light);
+  --color-ink: var(--ds-ink);
+  --color-bg-dark: var(--ds-bg-dark);
+  --color-soft-white: var(--ds-soft-white);
+  --color-blue: var(--ds-blue);
+  --color-gold: var(--ds-gold);
+  --color-light-gray: var(--ds-light-gray);
+  --color-soft-gray: var(--ds-soft-gray);
+  --color-text-secondary: var(--ds-text-secondary);
+  --color-text-muted: var(--ds-text-muted);
+  --color-text-body: var(--ds-text-body);
 
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Inter", sans-serif;
@@ -99,6 +127,9 @@
     font-family: var(--font-sans);
     font-weight: var(--weight-sans-regular);
     -webkit-font-smoothing: antialiased;
+    transition:
+      background-color var(--transition-fast),
+      color var(--transition-fast);
   }
 
   :focus-visible {
@@ -106,6 +137,7 @@
     outline-offset: 3px;
   }
 }
+
 
 /* Conteneur transverse */
 @utility shell {
