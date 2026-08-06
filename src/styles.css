@@ -144,3 +144,19 @@
     }
   }
 }
+
+/* Rotation des engrenages du hero (2D, ligne fine) */
+@keyframes gear-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  svg[style*="gear-spin"] {
+    animation: none !important;
+  }
+}
