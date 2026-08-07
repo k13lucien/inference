@@ -73,7 +73,7 @@ export function Globe({ className }: { className?: string }) {
       ctx.clearRect(0, 0, width, height);
 
       // Rotation continue autour de l'axe polaire + légère inclinaison fixe.
-      const spin = reduced ? 2.1 : (t / 1000) * 0.11 + 2.1;
+      const spin = reduced ? -0.6 : (t / 1000) * 0.09 - 0.6;
       const tilt = (-16 * Math.PI) / 180;
       const cosT = Math.cos(tilt);
       const sinT = Math.sin(tilt);
@@ -135,7 +135,7 @@ export function Globe({ className }: { className?: string }) {
 
       // Points continents.
       ctx.fillStyle = accent;
-      const size = Math.max(0.9, r / 175);
+      const size = Math.max(1.05, r / 140);
       for (const d of dots) {
         const p = project(d.x, d.y, d.z);
         if (p.z <= 0.02) continue;

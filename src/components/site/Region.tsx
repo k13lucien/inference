@@ -42,11 +42,9 @@ export function Region() {
           className="relative mx-auto mt-10 w-full max-w-[860px] border-x border-light-gray"
         >
           <Globe className="block h-[clamp(300px,58vw,620px)] w-full" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center pb-2">
-            <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-text-muted">
-              {t.region.caption}
-            </p>
-          </div>
+          <p className="pointer-events-none absolute bottom-4 left-6 font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-text-muted">
+            {t.region.caption}
+          </p>
         </Reveal>
 
         <div className="mt-0 grid gap-px border-t border-light-gray bg-light-gray min-[761px]:grid-cols-3">
