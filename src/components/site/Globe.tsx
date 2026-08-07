@@ -7,7 +7,7 @@ type Dot = { x: number; y: number; z: number };
 /** Points terre en coordonnées cartésiennes unitaires (échantillonnage égal-aire). */
 function buildDots() {
   const dots: Dot[] = [];
-  const step = 1.9; // degrés de latitude
+  const step = 1.25; // degrés de latitude
   for (let lat = -88; lat <= 88; lat += step) {
     const rad = (lat * Math.PI) / 180;
     const circumference = Math.cos(rad);
