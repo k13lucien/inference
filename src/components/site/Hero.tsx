@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden pt-[140px] pb-[120px] max-[560px]:pt-20 max-[560px]:pb-16"
+      className="relative overflow-hidden pt-8 pb-[120px] max-[560px]:pt-8 max-[560px]:pb-16"
     >
       <div
         aria-hidden="true"

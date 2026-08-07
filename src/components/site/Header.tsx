@@ -9,9 +9,9 @@ export function Header() {
   const { theme, toggleTheme } = useTheme();
 
   const nav = [
-    { href: "#qui-sommes-nous", label: t.nav.about },
     { href: "#offres", label: t.nav.offers },
-    { href: "#pour-qui", label: t.nav.audience },
+    { href: "#qui-sommes-nous", label: t.nav.about },
+    { label: t.nav.realizations, disabled: true },
     { href: "#contact", label: t.nav.contact },
   ];
 
@@ -77,16 +77,27 @@ export function Header() {
         </a>
 
         <nav aria-label={t.nav.main} className="hidden items-center gap-9 md:flex">
-          {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="group relative font-sans text-[14px] text-text-secondary transition-colors hover:text-ink"
-            >
-              {item.label}
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-blue transition-[width] duration-200 group-hover:w-full" />
-            </a>
-          ))}
+          {nav.map((item) =>
+            item.disabled ? (
+              <span
+                key={item.label}
+                aria-disabled="true"
+                title="Non disponible actuellement"
+                className="font-sans text-[14px] text-text-muted opacity-55"
+              >
+                {item.label}
+              </span>
+            ) : (
+              <a
+                key={item.href}
+                href={item.href}
+                className="group relative font-sans text-[14px] text-text-secondary transition-colors hover:text-ink"
+              >
+                {item.label}
+                <span className="absolute -bottom-1 left-0 h-px w-0 bg-blue transition-[width] duration-200 group-hover:w-full" />
+              </a>
+            ),
+          )}
           {controls}
           <a
             href="#contact"
@@ -113,14 +124,26 @@ export function Header() {
         <nav aria-label={t.nav.mobile} className="border-t border-light-gray bg-bg-light md:hidden">
           <ul className="shell flex flex-col py-3">
             {nav.map((item) => (
-              <li key={item.href} className="border-b border-light-gray last:border-0">
-                <a
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="block py-3.5 font-sans text-[15px] text-text-secondary"
-                >
-                  {item.label}
-                </a>
+              <li
+                key={item.href ?? item.label}
+                className="border-b border-light-gray last:border-0"
+              >
+                {item.disabled ? (
+                  <span
+                    aria-disabled="true"
+                    className="block py-3.5 font-sans text-[15px] text-text-muted opacity-55"
+                  >
+                    {item.label}
+                  </span>
+                ) : (
+                  <a
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className="block py-3.5 font-sans text-[15px] text-text-secondary"
+                  >
+                    {item.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
