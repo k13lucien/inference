@@ -7,6 +7,8 @@ import { Services } from "@/components/site/Services";
 import { Method } from "@/components/site/Method";
 import { Audience } from "@/components/site/Audience";
 import { Proof } from "@/components/site/Proof";
+import { Region } from "@/components/site/Region";
+
 import { Positioning } from "@/components/site/Positioning";
 import { ContactCta } from "@/components/site/ContactCta";
 import { Footer } from "@/components/site/Footer";
