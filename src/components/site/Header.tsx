@@ -9,10 +9,10 @@ export function Header() {
   const { theme, toggleTheme } = useTheme();
 
   const nav = [
-    { href: "#offres", label: t.nav.offers },
-    { href: "#qui-sommes-nous", label: t.nav.about },
+    { href: "/#offres", label: t.nav.offers },
+    { href: "/about", label: t.nav.about },
     { label: t.nav.realizations, disabled: true },
-    { href: "#contact", label: t.nav.contact },
+    { href: "/#contact", label: t.nav.contact },
   ];
 
   const controlBase =
@@ -72,7 +72,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-light-gray bg-bg-light/90 backdrop-blur-[6px]">
       <div className="shell flex h-[76px] items-center justify-between">
-        <a href="#top" className="font-serif text-[19px] font-semibold text-ink">
+        <a href="/" className="font-serif text-[19px] font-semibold text-ink">
           Inference <span className="text-text-muted">·</span> Your Tech Partner
         </a>
 
@@ -100,7 +100,7 @@ export function Header() {
           )}
           {controls}
           <a
-            href="#contact"
+            href="/#contact"
             className="border border-ink px-4 py-2 font-sans text-[13px] font-medium text-ink transition-colors hover:bg-ink hover:text-soft-white"
           >
             {t.nav.cta}

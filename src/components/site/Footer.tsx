@@ -22,17 +22,17 @@ export function Footer() {
             </h2>
             <ul className="mt-5 space-y-3 font-sans text-[14px] text-text-secondary">
               <li>
-                <a href="#qui-sommes-nous" className="hover:text-ink">
+                <a href="/about" className="hover:text-ink">
                   {t.nav.about}
                 </a>
               </li>
               <li>
-                <a href="#offres" className="hover:text-ink">
+                <a href="/#offres" className="hover:text-ink">
                   {t.nav.offers}
                 </a>
               </li>
               <li>
-                <a href="#pour-qui" className="hover:text-ink">
+                <a href="/#pour-qui" className="hover:text-ink">
                   {t.nav.audience}
                 </a>
               </li>
@@ -60,7 +60,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-ink">
+                <a href="/#contact" className="hover:text-ink">
                   {t.footer.discuss}
                 </a>
               </li>
@@ -70,7 +70,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-light-gray pt-6 font-sans text-[13px] text-text-muted">
           <p>{t.footer.rights}</p>
-          <a href="#top" className="hover:text-ink">
+          <a href="/" className="hover:text-ink">
             {t.footer.legal}
           </a>
         </div>

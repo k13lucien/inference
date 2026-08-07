@@ -29,11 +29,11 @@ export const dict = {
       note: "Réponse sous 48h",
     },
     problem: {
-      label: "Le constat",
-      title: "La complexité freine la décision, pas le manque d'outils.",
-      p1: "La plupart des organisations n'échouent pas faute de technologie disponible. Elles échouent parce que le besoin métier a été mal traduit en solution — trop tôt, sans compréhension suffisante du terrain.",
-      p2: "Le résultat : des outils qui répondent à un problème mal posé, une dette technique qui s'accumule, et des décisions prises sans visibilité sur leurs conséquences réelles.",
-      p3: "Inference intervient en amont, pour décoder la complexité avant de la traduire en système.",
+      label: "// Notre philosophie",
+      title: "Construire ce qui compte.",
+      p1: "La technologie ouvre de nombreuses possibilités. Notre rôle est de déterminer lesquelles créent réellement de la valeur.",
+      p2: "Nous commençons par comprendre les usages, les contraintes et les objectifs avant de concevoir une solution. Parce qu'un système efficace n'est pas celui qui accumule les fonctionnalités, mais celui qui répond avec précision aux besoins de ceux qui l'utilisent.",
+      p3: "Chaque décision technique doit servir une finalité : simplifier les parcours, améliorer les opérations et permettre aux organisations d'évoluer durablement.",
     },
     services: {
       label: "Ce que nous faisons",
@@ -167,11 +167,11 @@ export const dict = {
       note: "Reply within 48h",
     },
     problem: {
-      label: "The observation",
-      title: "Complexity slows decisions down — not a lack of tools.",
-      p1: "Most organisations don't fail for lack of available technology. They fail because the business need was poorly translated into a solution — too early, without a sufficient understanding of the field.",
-      p2: "The result: tools answering a badly framed problem, technical debt piling up, and decisions made without visibility on their real consequences.",
-      p3: "Inference steps in upstream, to decode complexity before translating it into a system.",
+      label: "// Our Philosophy",
+      title: "Build What Matters.",
+      p1: "Technology opens up countless possibilities. Our role is to identify the ones that create real value.",
+      p2: "We begin by understanding real-world usage, constraints, and objectives before designing a solution. Because an effective system is not the one that simply accumulates features, but the one that precisely addresses the needs of the people who use it.",
+      p3: "Every technical decision should serve a purpose: simplifying experiences, improving operations, and enabling organizations to evolve sustainably.",
     },
     services: {
       label: "What we do",
