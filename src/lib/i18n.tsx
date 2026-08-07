@@ -96,7 +96,28 @@ export const dict = {
       author: "— Nom, poste, organisation",
       metric: "Chiffre concret à renseigner (ex. nombre de projets, gain mesuré)",
     },
+    region: {
+      titleStart: "Périmètre : ",
+      titleAccent: "monde entier",
+      lead: "Une seule équipe pour cadrer, construire et opérer — au plus près de vos métiers, où qu'ils soient.",
+      caption: "Réseau de diffusion",
+      cards: [
+        {
+          title: "Intervenir partout",
+          body: "Cadrage, ingénierie et suivi menés à distance comme sur site, sur trois continents et six fuseaux horaires.",
+        },
+        {
+          title: "Intervenir au bon endroit",
+          body: "Nous nous plaçons près de vos équipes, de vos données et de vos processus réels, jamais à côté.",
+        },
+        {
+          title: "Intervenir à la bonne échelle",
+          body: "Des systèmes qui suivent votre croissance sans replanification permanente.",
+        },
+      ],
+    },
     positioning: {
+
       label: "Positionnement",
       titleStart: "Nous ne vendons pas des outils. ",
       titleAccent: "Nous décodons des problèmes.",
