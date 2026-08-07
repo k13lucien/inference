@@ -227,7 +227,28 @@ export const dict = {
       author: "— Name, role, organisation",
       metric: "Concrete figure to be filled in (e.g. number of projects, measured gain)",
     },
+    region: {
+      titleStart: "Scope: ",
+      titleAccent: "planet-wide",
+      lead: "One team to frame, build and operate — close to your business, wherever it runs.",
+      caption: "Delivery network",
+      cards: [
+        {
+          title: "Work everywhere",
+          body: "Framing, engineering and follow-up delivered remotely or on site, across three continents and six time zones.",
+        },
+        {
+          title: "Work in the right place",
+          body: "We sit close to your teams, your data and your real processes — never beside them.",
+        },
+        {
+          title: "Work at the right scale",
+          body: "Systems that follow your growth without constant capacity replanning.",
+        },
+      ],
+    },
     positioning: {
+
       label: "Positioning",
       titleStart: "We don't sell tools. ",
       titleAccent: "We decode problems.",
