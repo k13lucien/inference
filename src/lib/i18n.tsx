@@ -7,6 +7,7 @@ const STORAGE_KEY = "inference-locale";
 export const dict = {
   fr: {
     nav: {
+      home: "Accueil",
       about: "Qui sommes-nous",
       offers: "Offres",
       realizations: "Réalisations",
@@ -117,11 +118,39 @@ export const dict = {
       ],
     },
     positioning: {
-
       label: "Positionnement",
       titleStart: "Nous ne vendons pas des outils. ",
       titleAccent: "Nous décodons des problèmes.",
       body: "La confiance ne vient pas de la promesse technologique, mais de la précision du diagnostic et de la maîtrise de son exécution.",
+    },
+    about: {
+      breadcrumb: "Qui sommes-nous",
+      label: "Qui sommes-nous",
+      title: "Une équipe pensée pour décoder les problèmes complexes.",
+      intro:
+        "Inference accompagne les organisations qui veulent transformer une situation métier complexe en système numérique clair, utile et durable.",
+      introSample:
+        "Cet espace est un contenu exemple : vous pourrez y détailler votre histoire, vos expertises, vos valeurs, votre équipe ou votre manière de travailler.",
+      approachLabel: "Notre approche",
+      approachTitle: "Des principes simples pour cadrer, construire et accompagner.",
+      principles: [
+        {
+          title: "Comprendre avant de construire",
+          body: "Nous partons des usages réels, des contraintes métier et des objectifs mesurables avant de proposer une solution.",
+        },
+        {
+          title: "Concevoir pour durer",
+          body: "Chaque choix technique doit rester lisible, maintenable et capable d'accompagner l'évolution de l'organisation.",
+        },
+        {
+          title: "Avancer avec clarté",
+          body: "Nous privilégions des décisions explicites, des jalons courts et une communication directe sur les risques.",
+        },
+      ],
+      closingLabel: "À adapter",
+      closingTitle: "Votre histoire peut prendre place ici.",
+      closingBody:
+        "Ajoutez une présentation plus personnelle, quelques chiffres clés, une citation, ou les profils des personnes qui composent l'équipe. La structure est volontairement simple pour rester facile à modifier.",
     },
     contact: {
       title: "Parlons de votre problématique avant de parler solution.",
@@ -145,6 +174,7 @@ export const dict = {
   },
   en: {
     nav: {
+      home: "Home",
       about: "Who we are",
       offers: "Services",
       realizations: "Work",
@@ -248,11 +278,39 @@ export const dict = {
       ],
     },
     positioning: {
-
       label: "Positioning",
       titleStart: "We don't sell tools. ",
       titleAccent: "We decode problems.",
       body: "Trust doesn't come from a technology promise, but from the precision of the diagnosis and the mastery of its execution.",
+    },
+    about: {
+      breadcrumb: "Who we are",
+      label: "Who we are",
+      title: "A team built to decode complex problems.",
+      intro:
+        "Inference helps organisations turn complex business situations into clear, useful, durable digital systems.",
+      introSample:
+        "This is sample content: you can later replace it with your story, expertise, values, team, or way of working.",
+      approachLabel: "Our approach",
+      approachTitle: "Simple principles for framing, building, and supporting.",
+      principles: [
+        {
+          title: "Understand before building",
+          body: "We start from real usage, business constraints, and measurable goals before proposing a solution.",
+        },
+        {
+          title: "Design to last",
+          body: "Every technical choice should stay readable, maintainable, and able to support the organisation as it evolves.",
+        },
+        {
+          title: "Move with clarity",
+          body: "We favour explicit decisions, short milestones, and direct communication about risk.",
+        },
+      ],
+      closingLabel: "To adapt",
+      closingTitle: "Your story can live here.",
+      closingBody:
+        "Add a more personal introduction, a few key figures, a quote, or the profiles of the people on the team. The structure is intentionally simple so it stays easy to edit.",
     },
     contact: {
       title: "Let's talk about your problem before talking solutions.",
