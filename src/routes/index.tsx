@@ -45,7 +45,9 @@ function Index() {
           <Services />
           <Method />
           <Audience />
+          <Region />
           <Proof />
+
           <Positioning />
           <ContactCta />
         </main>
