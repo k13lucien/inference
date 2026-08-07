@@ -135,7 +135,7 @@ export function Globe({ className }: { className?: string }) {
 
       // Points continents.
       ctx.fillStyle = accent;
-      const size = Math.max(1.05, r / 140);
+      const size = Math.max(0.85, r / 200);
       for (const d of dots) {
         const p = project(d.x, d.y, d.z);
         if (p.z <= 0.02) continue;
