@@ -103,12 +103,6 @@ export const dict = {
         },
       ],
     },
-    proof: {
-      label: "Preuve",
-      quote: "« Emplacement réservé pour une citation client réelle, une fois disponible. »",
-      author: "— Nom, poste, organisation",
-      metric: "Chiffre concret à renseigner (ex. nombre de projets, gain mesuré)",
-    },
     region: {
       titleStart: "Proche de vous, ",
       titleAccent: "où que vous soyez.",
@@ -296,12 +290,6 @@ export const dict = {
           body: "Added expertise and architectural support on complex projects.",
         },
       ],
-    },
-    proof: {
-      label: "Proof",
-      quote: "\u201cPlaceholder for a real client quote, once available.\u201d",
-      author: "— Name, role, organisation",
-      metric: "Concrete figure to be filled in (e.g. number of projects, measured gain)",
     },
     region: {
       titleStart: "Close to you, ",

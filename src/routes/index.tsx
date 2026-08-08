@@ -5,7 +5,6 @@ import { Hero } from "@/components/site/Hero";
 import { Problem } from "@/components/site/Problem";
 import { Services } from "@/components/site/Services";
 import { Audience } from "@/components/site/Audience";
-import { Proof } from "@/components/site/Proof";
 import { Region } from "@/components/site/Region";
 
 import { Positioning } from "@/components/site/Positioning";
@@ -43,8 +42,6 @@ function Index() {
           <Services />
           <Audience />
           <Region />
-
-          <Proof />
 
           <Positioning />
           <ContactCta />
