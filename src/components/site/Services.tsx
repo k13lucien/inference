@@ -15,14 +15,30 @@ export function Services() {
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid gap-px bg-light-gray min-[761px]:grid-cols-2">
+        <div className="mt-16 grid gap-px border-t border-light-gray bg-light-gray min-[761px]:grid-cols-3">
           {t.services.cards.map((card, i) => (
             <Reveal key={card.title} delay={i * 90} className="bg-bg-light p-10 max-[560px]:p-6">
-              <h3 className="font-serif text-[26px] font-semibold text-ink">{card.title}</h3>
-              <p className="mt-5 font-sans text-[15px] leading-[1.75] text-text-body">{card.body}</p>
+              <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-blue">
+                {card.title}
+              </p>
+              <h3 className="mt-5 font-serif text-[22px] font-semibold leading-[1.3] text-ink">
+                {card.statement}
+              </h3>
+              <p className="mt-4 font-sans text-[15px] leading-[1.75] text-text-body">
+                {card.body}
+              </p>
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={270} className="mt-12">
+          <a
+            href="#"
+            className="inline-block bg-ink px-7 py-4 font-sans text-[14px] font-medium text-soft-white transition-opacity hover:opacity-85"
+          >
+            {t.services.detailsCta}
+          </a>
+        </Reveal>
       </div>
     </section>
   );

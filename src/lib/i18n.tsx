@@ -37,19 +37,27 @@ export const dict = {
       p3: "Chaque décision technique doit servir une finalité : simplifier les parcours, améliorer les opérations et permettre aux organisations d'évoluer durablement.",
     },
     services: {
-      label: "Ce que nous faisons",
-      title:
-        "Deux disciplines, une seule responsabilité : la cohérence entre le besoin et le système.",
+      label: "// Ce que nous faisons",
+      title: "Vous accompagner, du diagnostic à la pratique quotidienne.",
       cards: [
         {
-          title: "Conseil",
-          body: "Diagnostic des problématiques métier, cadrage des besoins et arbitrages technologiques — avant tout engagement de développement. Nous aidons à poser la bonne question avant de financer une réponse.",
+          title: "Technologie",
+          statement: "Faire de la technologie un levier durable, au service de votre organisation.",
+          body: "Nous concevons des solutions qui s'intègrent à votre fonctionnement, répondent à vos besoins réels et peuvent évoluer au rythme de votre organisation.",
         },
         {
-          title: "Ingénierie logicielle",
-          body: "Conception et développement de solutions numériques dimensionnées à l'organisation, pensées pour évoluer avec elle plutôt que pour être remplacées dans deux ans.",
+          title: "Communication",
+          statement: "Faire de votre communication un prolongement cohérent de votre organisation.",
+          body: "Nous donnons forme à votre identité et à vos messages pour qu'ils expriment clairement ce que vous êtes, ce que vous faites et la valeur que vous apportez.",
+        },
+        {
+          title: "Formation",
+          statement:
+            "Donner à vos équipes les moyens de comprendre, d'utiliser et de faire évoluer leurs pratiques.",
+          body: "Nous transmettons des compétences directement utiles, en lien avec les outils, les méthodes et les enjeux de votre organisation.",
         },
       ],
+      detailsCta: "Voir le détail de nos offres →",
     },
     method: {
       label: "La méthode",
@@ -213,18 +221,26 @@ export const dict = {
       p3: "Every technical decision should serve a purpose: simplifying experiences, improving operations, and enabling organizations to evolve sustainably.",
     },
     services: {
-      label: "What we do",
-      title: "Two disciplines, one responsibility: coherence between the need and the system.",
+      label: "// What we do",
+      title: "Supporting you from diagnosis to everyday practice.",
       cards: [
         {
-          title: "Consulting",
-          body: "Diagnosis of business problems, needs framing and technology trade-offs — before any development commitment. We help ask the right question before funding an answer.",
+          title: "Technology",
+          statement: "Making technology a lasting asset to your organization.",
+          body: "We design solutions that fit naturally into the way you work, address your real needs, and evolve with your organization.",
         },
         {
-          title: "Software engineering",
-          body: "Design and development of digital solutions sized for the organisation, built to evolve with it rather than to be replaced in two years.",
+          title: "Communication",
+          statement: "Making your communication a coherent extension of your organization.",
+          body: "We shape your identity and messaging so they clearly express who you are, what you do, and the value you bring.",
+        },
+        {
+          title: "Training",
+          statement: "Giving your teams the means to understand, use, and evolve their practices.",
+          body: "We provide practical skills directly connected to the tools, methods, and challenges of your organization.",
         },
       ],
+      detailsCta: "Explore our offerings →",
     },
     method: {
       label: "The method",
