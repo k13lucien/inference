@@ -284,6 +284,13 @@ export const dict = {
         },
       ],
     },
+    stack: {
+      label: "Technology stack",
+      titleStart: "Build ",
+      titleAccent: "without boundaries.",
+      lead: "A stack chosen for reliability and longevity, not for hype: typed languages, solid data foundations, reproducible deployments and end-to-end observability.",
+      note: "Technology choices always follow the diagnosis, never the other way around.",
+    },
     positioning: {
       label: "Positioning",
       titleStart: "We don't sell tools. ",
