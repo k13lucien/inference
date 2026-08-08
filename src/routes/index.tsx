@@ -7,7 +7,6 @@ import { Services } from "@/components/site/Services";
 import { Audience } from "@/components/site/Audience";
 import { Proof } from "@/components/site/Proof";
 import { Region } from "@/components/site/Region";
-import { Stack } from "@/components/site/Stack";
 
 import { Positioning } from "@/components/site/Positioning";
 import { ContactCta } from "@/components/site/ContactCta";
@@ -44,7 +43,6 @@ function Index() {
           <Services />
           <Audience />
           <Region />
-          <Stack />
 
           <Proof />
 

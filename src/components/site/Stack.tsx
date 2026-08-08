@@ -3,13 +3,6 @@ import type { ReactElement } from "react";
 import { useI18n } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 
-/**
- * Pile technologique — reproduction fidèle du bloc « Build without boundaries » :
- * panneau pleine largeur en fond sombre + texture pointillée, tuiles pivotées en
- * arrière-plan, titre/accroche/boutons centrés, halo bas et bande défilante en pied.
- * Accent or, puisque le fond est sombre.
- */
-
 type Item = { label: string; icon: ReactElement };
 
 const icon = {
@@ -168,8 +161,7 @@ export function Stack() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 opacity-[0.18]"
           style={{
-            backgroundImage:
-              "radial-gradient(var(--color-soft-white) 0.6px, transparent 0.6px)",
+            backgroundImage: "radial-gradient(var(--color-soft-white) 0.6px, transparent 0.6px)",
             backgroundSize: "6px 6px",
           }}
         />
@@ -211,7 +203,7 @@ export function Stack() {
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <a
-                href="#contact"
+                href="/#contact"
                 className="inline-flex items-center bg-soft-white px-7 py-[13px] font-sans text-[14.5px] font-medium text-bg-dark transition-opacity hover:opacity-85"
               >
                 {t.stack.ctaPrimary}

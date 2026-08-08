@@ -6,6 +6,7 @@ import { Header } from "@/components/site/Header";
 import { Method } from "@/components/site/Method";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
+import { Stack } from "@/components/site/Stack";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -113,6 +114,8 @@ function OffresContent() {
             </div>
           </div>
         </section>
+
+        <Stack />
 
         <Method />
 
