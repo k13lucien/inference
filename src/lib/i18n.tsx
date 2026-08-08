@@ -110,22 +110,22 @@ export const dict = {
       metric: "Chiffre concret à renseigner (ex. nombre de projets, gain mesuré)",
     },
     region: {
-      titleStart: "Périmètre : ",
-      titleAccent: "monde entier",
-      lead: "Une seule équipe pour cadrer, construire et opérer — au plus près de vos métiers, où qu'ils soient.",
+      titleStart: "Proche de vous, ",
+      titleAccent: "où que vous soyez.",
+      lead: "Une même équipe pour cadrer, construire et accompagner vos projets, où que votre organisation soit.",
       caption: "Réseau de diffusion",
       cards: [
         {
-          title: "Intervenir partout",
-          body: "Cadrage, ingénierie et suivi menés à distance comme sur site, sur trois continents et six fuseaux horaires.",
+          title: "Une présence mondiale",
+          body: "Nous travaillons à distance comme sur site, au-delà des frontières et des fuseaux horaires, avec la même rigueur.",
         },
         {
-          title: "Intervenir au bon endroit",
-          body: "Nous nous plaçons près de vos équipes, de vos données et de vos processus réels, jamais à côté.",
+          title: "Proches de vos réalités",
+          body: "Nous nous intégrons à vos équipes, vos données et vos processus pour comprendre votre environnement et répondre à vos enjeux.",
         },
         {
-          title: "Intervenir à la bonne échelle",
-          body: "Des systèmes qui suivent votre croissance sans replanification permanente.",
+          title: "Une continuité dans le temps",
+          body: "Nous restons présents au-delà de la mise en œuvre, pour accompagner l'évolution de vos solutions au rythme de votre organisation.",
         },
       ],
     },
@@ -304,22 +304,22 @@ export const dict = {
       metric: "Concrete figure to be filled in (e.g. number of projects, measured gain)",
     },
     region: {
-      titleStart: "Scope: ",
-      titleAccent: "planet-wide",
-      lead: "One team to frame, build and operate — close to your business, wherever it runs.",
+      titleStart: "Close to you, ",
+      titleAccent: "wherever you are.",
+      lead: "One team to frame, build, and support your projects, wherever your organization is based.",
       caption: "Delivery network",
       cards: [
         {
-          title: "Work everywhere",
-          body: "Framing, engineering and follow-up delivered remotely or on site, across three continents and six time zones.",
+          title: "A Global Presence",
+          body: "We work remotely or on site, across borders and time zones, with the same level of rigor.",
         },
         {
-          title: "Work in the right place",
-          body: "We sit close to your teams, your data and your real processes — never beside them.",
+          title: "Close to Your Reality",
+          body: "We work alongside your teams, with your data and processes, to understand your environment and address your challenges.",
         },
         {
-          title: "Work at the right scale",
-          body: "Systems that follow your growth without constant capacity replanning.",
+          title: "Continuity Over Time",
+          body: "We remain by your side beyond implementation, helping your solutions evolve alongside your organization.",
         },
       ],
     },
