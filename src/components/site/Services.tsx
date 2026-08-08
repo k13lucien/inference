@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 import { SectionLabel } from "./SectionLabel";
@@ -32,12 +33,12 @@ export function Services() {
         </div>
 
         <Reveal delay={270} className="mt-12">
-          <a
-            href="#"
+          <Link
+            to="/offres"
             className="inline-block bg-ink px-7 py-4 font-sans text-[14px] font-medium text-soft-white transition-opacity hover:opacity-85"
           >
             {t.services.detailsCta}
-          </a>
+          </Link>
         </Reveal>
       </div>
     </section>

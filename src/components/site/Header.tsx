@@ -9,7 +9,7 @@ export function Header() {
   const { theme, toggleTheme } = useTheme();
 
   const nav = [
-    { href: "/#offres", label: t.nav.offers },
+    { href: "/offres", label: t.nav.offers },
     { href: "/about", label: t.nav.about },
     { label: t.nav.realizations, disabled: true },
     { href: "/#contact", label: t.nav.contact },

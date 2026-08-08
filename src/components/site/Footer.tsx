@@ -27,7 +27,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/#offres" className="hover:text-ink">
+                <a href="/offres" className="hover:text-ink">
                   {t.nav.offers}
                 </a>
               </li>

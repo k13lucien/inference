@@ -169,6 +169,19 @@ export const dict = {
       closingBody:
         "Ajoutez une présentation plus personnelle, quelques chiffres clés, une citation, ou les profils des personnes qui composent l'équipe. La structure est volontairement simple pour rester facile à modifier.",
     },
+    offers: {
+      breadcrumb: "Offres",
+      label: "// Ce que nous faisons",
+      title: "Vous accompagner, du diagnostic à la pratique quotidienne.",
+      intro:
+        "Trois disciplines, une seule responsabilité : la cohérence entre le besoin et le système.",
+      introSample:
+        "Cet espace est un contenu exemple : vous pourrez y détailler chacune de nos offres, leurs périmètres, leurs modalités et leurs livrables.",
+      detailLabel: "À compléter",
+      detailTitle: "Le détail de chaque offre prendra place ici.",
+      detailBody:
+        "Ajoutez pour chaque discipline le périmètre, les livrables, les modalités d'intervention et un exemple de démarrage.",
+    },
     contact: {
       title: "Parlons de votre problématique avant de parler solution.",
       name: "Nom",
@@ -345,6 +358,18 @@ export const dict = {
       closingTitle: "Your story can live here.",
       closingBody:
         "Add a more personal introduction, a few key figures, a quote, or the profiles of the people on the team. The structure is intentionally simple so it stays easy to edit.",
+    },
+    offers: {
+      breadcrumb: "Services",
+      label: "What we do",
+      title: "Supporting you from diagnosis to everyday practice.",
+      intro: "Three disciplines, one responsibility: coherence between the need and the system.",
+      introSample:
+        "This is sample content: you can later detail each of our offers, their scope, how they work, and what they deliver.",
+      detailLabel: "To be completed",
+      detailTitle: "The details of each offer will take place here.",
+      detailBody:
+        "Add for each discipline its scope, deliverables, ways of working, and a sample kick-off.",
     },
     contact: {
       title: "Let's talk about your problem before talking solutions.",
