@@ -82,20 +82,24 @@ export const dict = {
       ],
     },
     audience: {
-      label: "Pour qui",
-      title: "Des organisations en phase d'évolution numérique.",
+      label: "// Pour qui",
+      title: "À chaque contexte, sa réponse.",
       items: [
         {
           title: "PME en croissance",
-          body: "Structuration des outils internes avant qu'ils ne deviennent un frein.",
+          body: "Structurer vos outils, votre présence et les compétences de vos équipes.",
         },
         {
           title: "Organisations en transformation",
-          body: "Refonte de systèmes existants devenus inadaptés aux processus réels.",
+          body: "Moderniser vos systèmes, votre image et les pratiques de vos équipes, au même rythme que votre organisation évolue.",
+        },
+        {
+          title: "Startups",
+          body: "Construire vite, mais avec une base technique, une identité et des pratiques internes qui tiennent dans la durée.",
         },
         {
           title: "Équipes techniques internes",
-          body: "Renfort de cadrage et d'expertise sur des projets complexes ou critiques.",
+          body: "Renfort d'expertise et d'architecture sur des projets complexes.",
         },
       ],
     },
@@ -272,20 +276,24 @@ export const dict = {
       ],
     },
     audience: {
-      label: "Who it's for",
-      title: "Organisations going through digital evolution.",
+      label: "// Who it's for",
+      title: "A different context, a matching response.",
       items: [
         {
           title: "Growing SMEs",
-          body: "Structuring internal tools before they become a bottleneck.",
+          body: "Structure your tools, your presence, and your team's skills.",
         },
         {
-          title: "Organisations in transformation",
-          body: "Rebuilding legacy systems that no longer fit real processes.",
+          title: "Organizations in transformation",
+          body: "Modernize your systems, your image, and your team's practices, at the same pace your organization evolves.",
         },
         {
-          title: "Internal engineering teams",
-          body: "Extra framing and expertise on complex or critical projects.",
+          title: "Startups",
+          body: "Build fast, but with a technical foundation, an identity, and internal practices built to last.",
+        },
+        {
+          title: "Internal technical teams",
+          body: "Added expertise and architectural support on complex projects.",
         },
       ],
     },
