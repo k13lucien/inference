@@ -1,3 +1,5 @@
+import type { ReactElement } from "react";
+
 import { useI18n } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 
@@ -8,7 +10,7 @@ import { Reveal } from "./Reveal";
  * Accent or, puisque le fond est sombre.
  */
 
-type Item = { label: string; icon: JSX.Element };
+type Item = { label: string; icon: ReactElement };
 
 const icon = {
   code: (
@@ -116,7 +118,7 @@ const tiles = [
   { top: "40%", left: "89%", rotate: 16, icon: icon.cloud },
 ];
 
-function Glyph({ children, size = 16 }: { children: JSX.Element; size?: number }) {
+function Glyph({ children, size = 16 }: { children: ReactElement; size?: number }) {
   return (
     <svg
       width={size}
