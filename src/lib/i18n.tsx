@@ -122,6 +122,8 @@ export const dict = {
       titleStart: "Construire ",
       titleAccent: "sans frontières.",
       lead: "Une pile choisie pour la fiabilité et la longévité, pas pour la mode : langages typés, données solides, déploiement reproductible et observabilité de bout en bout.",
+      ctaPrimary: "Discuter de votre projet",
+      ctaSecondary: "Voir la pile",
       note: "Le choix technologique découle toujours du diagnostic, jamais l'inverse.",
     },
     positioning: {
@@ -289,6 +291,8 @@ export const dict = {
       titleStart: "Build ",
       titleAccent: "without boundaries.",
       lead: "A stack chosen for reliability and longevity, not for hype: typed languages, solid data foundations, reproducible deployments and end-to-end observability.",
+      ctaPrimary: "Discuss your project",
+      ctaSecondary: "See the stack",
       note: "Technology choices always follow the diagnosis, never the other way around.",
     },
     positioning: {
