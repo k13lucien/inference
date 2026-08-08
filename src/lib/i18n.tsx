@@ -134,9 +134,10 @@ export const dict = {
     },
     positioning: {
       label: "Positionnement",
-      titleStart: "Nous ne vendons pas des outils. ",
-      titleAccent: "Nous décodons des problèmes.",
-      body: "La confiance ne vient pas de la promesse technologique, mais de la précision du diagnostic et de la maîtrise de son exécution.",
+      titleStart: "Un partenaire de ",
+      titleAccent: "confiance",
+      titleEnd: " pour vos enjeux numériques.",
+      body: "Inference accompagne les organisations dans la résolution de leurs problèmes grâce au numérique, en s'impliquant dans la décision autant que dans son exécution.",
     },
     about: {
       breadcrumb: "Qui sommes-nous",
@@ -322,9 +323,10 @@ export const dict = {
     },
     positioning: {
       label: "Positioning",
-      titleStart: "We don't sell tools. ",
-      titleAccent: "We decode problems.",
-      body: "Trust doesn't come from a technology promise, but from the precision of the diagnosis and the mastery of its execution.",
+      titleStart: "A ",
+      titleAccent: "trusted",
+      titleEnd: " partner for your digital challenges.",
+      body: "Inference supports organizations in solving their problems through technology, engaging in the decision as much as its execution.",
     },
     about: {
       breadcrumb: "Who we are",

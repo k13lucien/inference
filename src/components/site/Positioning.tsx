@@ -25,6 +25,7 @@ export function Positioning() {
           <h2 className="font-serif font-bold leading-[1.1] text-[clamp(32px,5vw,56px)]">
             {t.positioning.titleStart}
             <span className="text-gold">{t.positioning.titleAccent}</span>
+            {t.positioning.titleEnd}
           </h2>
           <p className="mt-9 max-w-[620px] font-sans text-[15.5px] leading-[1.75] text-soft-gray">
             {t.positioning.body}
