@@ -193,10 +193,10 @@ export function Stack() {
         {/* Halo bas */}
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute -bottom-[8%] left-1/2 h-[46%] w-[62%] -translate-x-1/2"
+          className="pointer-events-none absolute bottom-0 left-1/2 h-[40%] w-[58%] -translate-x-1/2 opacity-70"
           style={{
             background:
-              "radial-gradient(ellipse at 50% 100%, color-mix(in oklab, var(--color-gold) 55%, transparent), transparent 70%)",
+              "radial-gradient(ellipse at 50% 100%, color-mix(in oklab, var(--color-gold) 30%, transparent), transparent 72%)",
           }}
         />
 
