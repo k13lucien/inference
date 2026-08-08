@@ -117,6 +117,13 @@ export const dict = {
         },
       ],
     },
+    stack: {
+      label: "Pile technologique",
+      titleStart: "Construire ",
+      titleAccent: "sans frontières.",
+      lead: "Une pile choisie pour la fiabilité et la longévité, pas pour la mode : langages typés, données solides, déploiement reproductible et observabilité de bout en bout.",
+      note: "Le choix technologique découle toujours du diagnostic, jamais l'inverse.",
+    },
     positioning: {
       label: "Positionnement",
       titleStart: "Nous ne vendons pas des outils. ",
