@@ -47,6 +47,8 @@ function Index() {
           <Method />
           <Audience />
           <Region />
+          <Stack />
+
           <Proof />
 
           <Positioning />
