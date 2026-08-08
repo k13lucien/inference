@@ -3,6 +3,7 @@ import { useEffect } from "react";
 
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
+import { Method } from "@/components/site/Method";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
 import {
@@ -88,7 +89,7 @@ function OffresContent() {
           </div>
         </section>
 
-        <section className="border-y border-light-gray bg-bg-light py-[84px]">
+        <section className="border-t border-light-gray bg-bg-light py-[84px]">
           <div className="shell">
             <div className="grid gap-px overflow-hidden border border-light-gray bg-light-gray md:grid-cols-3">
               {t.services.cards.map((card, index) => (
@@ -112,6 +113,8 @@ function OffresContent() {
             </div>
           </div>
         </section>
+
+        <Method />
 
         <section className="bg-bg-dark py-[92px] text-soft-white">
           <div className="shell grid gap-10 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] md:items-end">

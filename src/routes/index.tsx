@@ -4,7 +4,6 @@ import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { Problem } from "@/components/site/Problem";
 import { Services } from "@/components/site/Services";
-import { Method } from "@/components/site/Method";
 import { Audience } from "@/components/site/Audience";
 import { Proof } from "@/components/site/Proof";
 import { Region } from "@/components/site/Region";
@@ -15,7 +14,6 @@ import { ContactCta } from "@/components/site/ContactCta";
 import { Footer } from "@/components/site/Footer";
 import { I18nProvider } from "@/lib/i18n";
 import { ThemeProvider } from "@/lib/theme";
-
 
 const title = "Inference · Conseil & ingénierie logicielle";
 const description =
@@ -44,7 +42,6 @@ function Index() {
           <Hero />
           <Problem />
           <Services />
-          <Method />
           <Audience />
           <Region />
           <Stack />
@@ -59,4 +56,3 @@ function Index() {
     </ThemeProvider>
   );
 }
-
