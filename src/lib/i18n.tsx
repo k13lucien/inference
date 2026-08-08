@@ -117,6 +117,13 @@ export const dict = {
         },
       ],
     },
+    stack: {
+      label: "Pile technologique",
+      titleStart: "Construire ",
+      titleAccent: "sans frontières.",
+      lead: "Une pile choisie pour la fiabilité et la longévité, pas pour la mode : langages typés, données solides, déploiement reproductible et observabilité de bout en bout.",
+      note: "Le choix technologique découle toujours du diagnostic, jamais l'inverse.",
+    },
     positioning: {
       label: "Positionnement",
       titleStart: "Nous ne vendons pas des outils. ",
@@ -276,6 +283,13 @@ export const dict = {
           body: "Systems that follow your growth without constant capacity replanning.",
         },
       ],
+    },
+    stack: {
+      label: "Technology stack",
+      titleStart: "Build ",
+      titleAccent: "without boundaries.",
+      lead: "A stack chosen for reliability and longevity, not for hype: typed languages, solid data foundations, reproducible deployments and end-to-end observability.",
+      note: "Technology choices always follow the diagnosis, never the other way around.",
     },
     positioning: {
       label: "Positioning",

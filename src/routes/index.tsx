@@ -8,6 +8,7 @@ import { Method } from "@/components/site/Method";
 import { Audience } from "@/components/site/Audience";
 import { Proof } from "@/components/site/Proof";
 import { Region } from "@/components/site/Region";
+import { Stack } from "@/components/site/Stack";
 
 import { Positioning } from "@/components/site/Positioning";
 import { ContactCta } from "@/components/site/ContactCta";
@@ -46,6 +47,8 @@ function Index() {
           <Method />
           <Audience />
           <Region />
+          <Stack />
+
           <Proof />
 
           <Positioning />
