@@ -111,14 +111,6 @@ export function Services() {
           })}
         </div>
 
-        <Reveal delay={200} className="mt-12">
-          <Link
-            to="/offres"
-            className="inline-block bg-ink px-7 py-4 font-sans text-[14px] font-medium text-soft-white transition-opacity hover:opacity-85"
-          >
-            {t.services.detailsCta}
-          </Link>
-        </Reveal>
       </div>
     </section>
   );
