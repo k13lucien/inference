@@ -42,7 +42,7 @@ export function Services() {
                   <div
                     aria-hidden={!isOpen}
                     className={[
-                      "flex h-full flex-col justify-center p-12 max-[1100px]:p-9",
+                      "absolute inset-0 flex flex-col justify-center p-12 max-[1100px]:p-9",
                       "transition-[opacity,transform] duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
                       isOpen
                         ? "opacity-100 delay-[180ms] translate-x-0"
