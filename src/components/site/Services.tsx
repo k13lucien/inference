@@ -31,41 +31,60 @@ export function Services() {
                   onClick={() => setOpen(i)}
                   onMouseEnter={() => setOpen(i)}
                   className={[
-                    "group relative min-h-[420px] overflow-hidden rounded-[36px] border text-left transition-all duration-500 ease-out",
+                    "group relative min-h-[420px] overflow-hidden rounded-[36px] border text-left",
+                    "transition-[flex-grow,flex-basis,width,border-color] duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
                     isOpen
-                      ? "flex-1 border-blue"
-                      : "w-[74px] shrink-0 border-light-gray hover:border-blue/50",
+                      ? "flex-1 basis-0 border-blue"
+                      : "w-[74px] shrink-0 grow-0 basis-[74px] border-light-gray hover:border-blue/50",
                   ].join(" ")}
                 >
-                  {isOpen ? (
-                    <div className="flex h-full flex-col justify-center p-12 max-[1100px]:p-9">
-                      <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-blue">
-                        {String(i + 1).padStart(2, "0")} — {card.title}
-                      </p>
-                      <h3 className="mt-6 max-w-[560px] font-serif text-[30px] font-semibold uppercase leading-[1.2] tracking-[0.02em] text-ink max-[1100px]:text-[24px]">
-                        {card.statement}
-                      </h3>
-                      <p className="mt-5 max-w-[560px] font-sans text-[15px] leading-[1.75] text-text-body">
-                        {card.body}
-                      </p>
-                      <Link
-                        to="/offres"
-                        className="mt-8 font-sans text-[12px] font-medium uppercase tracking-[0.18em] text-blue hover:underline"
-                      >
-                        {t.services.detailsCta}
-                      </Link>
-                    </div>
-                  ) : (
-                    <span className="flex h-full items-center justify-center">
-                      <span
-                        className="whitespace-nowrap font-sans text-[14px] font-medium tracking-[0.04em] text-ink"
-                        style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
-                      >
-                        {card.title}
-                      </span>
+                  {/* Panneau ouvert — fondu doux */}
+                  <div
+                    aria-hidden={!isOpen}
+                    className={[
+                      "flex h-full flex-col justify-center p-12 max-[1100px]:p-9",
+                      "transition-[opacity,transform] duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
+                      isOpen
+                        ? "opacity-100 delay-[180ms] translate-x-0"
+                        : "pointer-events-none opacity-0 -translate-x-2",
+                    ].join(" ")}
+                  >
+                    <p className="whitespace-nowrap font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-blue">
+                      {String(i + 1).padStart(2, "0")} — {card.title}
+                    </p>
+                    <h3 className="mt-6 max-w-[560px] font-serif text-[30px] font-semibold uppercase leading-[1.2] tracking-[0.02em] text-ink max-[1100px]:text-[24px]">
+                      {card.statement}
+                    </h3>
+                    <p className="mt-5 max-w-[560px] font-sans text-[15px] leading-[1.75] text-text-body">
+                      {card.body}
+                    </p>
+                    <Link
+                      to="/offres"
+                      tabIndex={isOpen ? 0 : -1}
+                      className="mt-8 w-fit font-sans text-[12px] font-medium uppercase tracking-[0.18em] text-blue hover:underline"
+                    >
+                      {t.services.detailsCta}
+                    </Link>
+                  </div>
+
+                  {/* Titre vertical — fondu croisé */}
+                  <span
+                    aria-hidden={isOpen}
+                    className={[
+                      "absolute inset-0 flex items-center justify-center",
+                      "transition-opacity duration-[400ms] ease-out",
+                      isOpen ? "pointer-events-none opacity-0" : "opacity-100 delay-[200ms]",
+                    ].join(" ")}
+                  >
+                    <span
+                      className="whitespace-nowrap font-sans text-[14px] font-medium tracking-[0.04em] text-ink"
+                      style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+                    >
+                      {card.title}
                     </span>
-                  )}
+                  </span>
                 </button>
+
               );
             })}
           </div>
@@ -79,7 +98,7 @@ export function Services() {
               <div
                 key={card.title}
                 className={[
-                  "overflow-hidden rounded-[28px] border transition-colors",
+                  "overflow-hidden rounded-[28px] border transition-colors duration-500",
                   isOpen ? "border-blue" : "border-light-gray",
                 ].join(" ")}
               >
@@ -92,21 +111,34 @@ export function Services() {
                   <span className="font-sans text-[13px] font-medium uppercase tracking-[0.18em] text-ink">
                     {card.title}
                   </span>
-                  <span className="font-sans text-[18px] leading-none text-blue">
-                    {isOpen ? "−" : "+"}
+                  <span
+                    className={[
+                      "font-sans text-[18px] leading-none text-blue transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]",
+                      isOpen ? "rotate-45" : "rotate-0",
+                    ].join(" ")}
+                  >
+                    +
                   </span>
                 </button>
-                {isOpen && (
-                  <div className="px-6 pb-7">
-                    <h3 className="font-serif text-[21px] font-semibold leading-[1.3] text-ink">
-                      {card.statement}
-                    </h3>
-                    <p className="mt-3 font-sans text-[15px] leading-[1.75] text-text-body">
-                      {card.body}
-                    </p>
+                <div
+                  className={[
+                    "grid transition-[grid-template-rows,opacity] duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
+                  ].join(" ")}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-6 pb-7">
+                      <h3 className="font-serif text-[21px] font-semibold leading-[1.3] text-ink">
+                        {card.statement}
+                      </h3>
+                      <p className="mt-3 font-sans text-[15px] leading-[1.75] text-text-body">
+                        {card.body}
+                      </p>
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
+
             );
           })}
         </div>
