@@ -45,8 +45,8 @@ export function Footer() {
             </h2>
             <ul className="mt-5 space-y-3 font-sans text-[14px] text-text-secondary">
               <li>
-                <a href="mailto:contact@inference.tech" className="hover:text-ink">
-                  contact@inference.tech
+                <a href="mailto:contact@inference.bf" className="hover:text-ink">
+                  contact@inference.bf
                 </a>
               </li>
               <li>

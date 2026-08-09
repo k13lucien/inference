@@ -182,7 +182,7 @@ export const dict = {
         "Ajoutez pour chaque discipline le périmètre, les livrables, les modalités d'intervention et un exemple de démarrage.",
     },
     contact: {
-      title: "Parlons de votre problématique avant de parler solution.",
+      title: "Parlons de ce qui vous préoccupe.",
       name: "Nom",
       email: "Email professionnel",
       message: "Votre contexte, en quelques lignes",
@@ -192,7 +192,7 @@ export const dict = {
     },
     footer: {
       tagline:
-        "Decode the Complex. Conseil et ingénierie logicielle pour organisations en évolution numérique.",
+        "Conseil, ingénierie et transformation numérique pour les organisations qui évoluent.",
       navTitle: "Navigation",
       contactTitle: "Contact",
       discuss: "Discuter d'un projet",
@@ -370,7 +370,7 @@ export const dict = {
         "Add for each discipline its scope, deliverables, ways of working, and a sample kick-off.",
     },
     contact: {
-      title: "Let's talk about your problem before talking solutions.",
+      title: "Let’s talk about what’s on your mind.",
       name: "Name",
       email: "Work email",
       message: "Your context, in a few lines",
@@ -380,7 +380,7 @@ export const dict = {
     },
     footer: {
       tagline:
-        "Decode the Complex. Consulting and software engineering for organisations in digital evolution.",
+        "Consulting, engineering, and digital transformation for organizations that are evolving.",
       navTitle: "Navigation",
       contactTitle: "Contact",
       discuss: "Discuss a project",
