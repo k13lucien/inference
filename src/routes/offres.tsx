@@ -3,6 +3,7 @@ import { useEffect } from "react";
 
 import { Footer } from "@/components/site/Footer";
 import { Communication } from "@/components/site/Communication";
+import { Formation } from "@/components/site/Formation";
 import { Header } from "@/components/site/Header";
 import { Method } from "@/components/site/Method";
 import { Reveal } from "@/components/site/Reveal";
@@ -106,6 +107,8 @@ function OffresContent() {
         <TechGrid />
 
         <Communication />
+
+        <Formation />
 
         <Stack />
 

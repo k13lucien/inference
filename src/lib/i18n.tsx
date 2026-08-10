@@ -239,6 +239,30 @@ export const dict = {
           },
         ],
       },
+      formation: {
+        label: "Formation",
+        title:
+          "Donner à vos équipes les moyens de comprendre, d'utiliser et de faire évoluer leurs pratiques.",
+        description:
+          "Nous transmettons des compétences directement utiles, en lien avec les outils, les méthodes et les enjeux de votre organisation.",
+        cards: [
+          {
+            title: "Formation technique",
+            statement: "Développer les compétences dont vos équipes ont besoin.",
+            body: "Développement logiciel, outils numériques, technologies et pratiques d'ingénierie adaptés au niveau et aux besoins de vos équipes.",
+          },
+          {
+            title: "Outils & pratiques",
+            statement: "Faciliter l'adoption de nouveaux outils et de nouvelles méthodes.",
+            body: "Des formations conçues autour de vos outils, de vos processus et des usages réels de vos équipes.",
+          },
+          {
+            title: "Formation sur mesure",
+            statement: "Apprendre à partir de vos propres enjeux.",
+            body: "Des parcours construits autour d'un besoin précis, d'un contexte et des objectifs de votre organisation.",
+          },
+        ],
+      },
     },
     contact: {
       title: "Parlons de ce qui vous préoccupe.",
@@ -484,6 +508,29 @@ export const dict = {
             title: "Design",
             statement: "Give shape to your ideas and messages.",
             body: "Visual and digital assets designed to reflect your identity and serve their intended purpose.",
+          },
+        ],
+      },
+      formation: {
+        label: "Training",
+        title: "Give your teams the means to understand, use, and evolve their practices.",
+        description:
+          "We provide practical skills directly relevant to your organization's tools, methods, and challenges.",
+        cards: [
+          {
+            title: "Technical Training",
+            statement: "Develop the skills your teams need.",
+            body: "Software development, digital tools, technologies, and engineering practices tailored to your teams' needs and level of expertise.",
+          },
+          {
+            title: "Tools & Practices",
+            statement: "Make it easier to adopt new tools and methods.",
+            body: "Training designed around your tools, processes, and the real-world practices of your teams.",
+          },
+          {
+            title: "Custom Training",
+            statement: "Learn from your own challenges.",
+            body: "Training programs built around a specific need, context, and set of organizational objectives.",
           },
         ],
       },
