@@ -74,23 +74,34 @@ function OffresContent() {
         <section className="bg-bg-light py-[90px]">
           <div className="shell grid gap-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-start">
             <Reveal>
-              <SectionLabel>{t.offers.label}</SectionLabel>
               <h1 className="max-w-[720px] font-serif text-[clamp(42px,6vw,78px)] font-bold leading-[0.98] text-ink">
                 {t.offers.title}
               </h1>
             </Reveal>
 
-            <Reveal
-              className="space-y-6 pt-1 font-sans text-[15.5px] leading-[1.8] text-text-body"
-              delay={120}
-            >
-              <p>{t.offers.intro}</p>
-              <p>{t.offers.introSample}</p>
+            <Reveal className="space-y-8 pt-1" delay={120}>
+              <p className="font-sans text-[15.5px] leading-[1.8] text-text-body">
+                {t.offers.hero}
+              </p>
+              <div className="flex flex-wrap items-center gap-6">
+                <a
+                  href="/#contact"
+                  className="bg-ink px-6 py-3.5 font-sans text-[14px] font-medium text-soft-white transition-opacity hover:opacity-85"
+                >
+                  {t.offers.ctaPrimary}
+                </a>
+                <a
+                  href="#offres"
+                  className="font-sans text-[14px] font-medium text-ink underline-offset-4 hover:underline"
+                >
+                  {t.offers.ctaSecondary} ↓
+                </a>
+              </div>
             </Reveal>
           </div>
         </section>
 
-        <section className="border-t border-light-gray bg-bg-light py-[84px]">
+        <section id="offres" className="border-t border-light-gray bg-bg-light py-[84px]">
           <div className="shell">
             <div className="grid gap-px overflow-hidden border border-light-gray bg-light-gray md:grid-cols-3">
               {t.services.cards.map((card, index) => (

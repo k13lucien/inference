@@ -170,12 +170,10 @@ export const dict = {
     },
     offers: {
       breadcrumb: "Offres",
-      label: "// Ce que nous faisons",
-      title: "Vous accompagner, du diagnostic à la pratique quotidienne.",
-      intro:
-        "Trois disciplines, une seule responsabilité : la cohérence entre le besoin et le système.",
-      introSample:
-        "Cet espace est un contenu exemple : vous pourrez y détailler chacune de nos offres, leurs périmètres, leurs modalités et leurs livrables.",
+      title: "Des réponses adaptées à vos enjeux.",
+      hero: "Inference intervient là où vos enjeux rencontrent le numérique : technologie, communication et formation.",
+      ctaPrimary: "Discuter de votre projet",
+      ctaSecondary: "Explorer nos offres",
       detailLabel: "À compléter",
       detailTitle: "Le détail de chaque offre prendra place ici.",
       detailBody:
@@ -359,11 +357,10 @@ export const dict = {
     },
     offers: {
       breadcrumb: "Services",
-      label: "What we do",
-      title: "Supporting you from diagnosis to everyday practice.",
-      intro: "Three disciplines, one responsibility: coherence between the need and the system.",
-      introSample:
-        "This is sample content: you can later detail each of our offers, their scope, how they work, and what they deliver.",
+      title: "Solutions tailored to your needs.",
+      hero: "Inference works where your challenges meet the digital world: technology, communication, and training.",
+      ctaPrimary: "Discuss your project",
+      ctaSecondary: "Explore our services",
       detailLabel: "To be completed",
       detailTitle: "The details of each offer will take place here.",
       detailBody:
