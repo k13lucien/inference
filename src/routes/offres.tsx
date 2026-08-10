@@ -7,6 +7,7 @@ import { Method } from "@/components/site/Method";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
 import { Stack } from "@/components/site/Stack";
+import { TechGrid } from "@/components/site/TechGrid";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -101,30 +102,7 @@ function OffresContent() {
           </div>
         </section>
 
-        <section id="offres" className="border-t border-light-gray bg-bg-light py-[84px]">
-          <div className="shell">
-            <div className="grid gap-px overflow-hidden border border-light-gray bg-light-gray md:grid-cols-3">
-              {t.services.cards.map((card, index) => (
-                <Reveal
-                  key={card.title}
-                  as="article"
-                  delay={index * 90}
-                  className="bg-bg-light p-7 md:min-h-[260px]"
-                >
-                  <p className="font-sans text-[12px] font-medium uppercase tracking-[0.22em] text-blue">
-                    {card.title}
-                  </p>
-                  <h3 className="mt-8 font-serif text-[29px] font-semibold leading-[1.05] text-ink">
-                    {card.statement}
-                  </h3>
-                  <p className="mt-5 font-sans text-[14.5px] leading-[1.75] text-text-body">
-                    {card.body}
-                  </p>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
+        <TechGrid />
 
         <Stack />
 

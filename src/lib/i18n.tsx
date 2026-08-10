@@ -178,6 +178,39 @@ export const dict = {
       detailTitle: "Le détail de chaque offre prendra place ici.",
       detailBody:
         "Ajoutez pour chaque discipline le périmètre, les livrables, les modalités d'intervention et un exemple de démarrage.",
+      tech: {
+        label: "Technologie",
+        title: "Des solutions pensées pour votre réalité.",
+        description:
+          "Nous intervenons sur l'ensemble du cycle numérique de votre organisation : comprendre vos besoins, construire les solutions pertinentes, les intégrer à votre environnement et les faire évoluer dans le temps.",
+        cards: [
+          {
+            title: "Conseil & cadrage",
+            statement: "Donner une direction claire avant d'engager des ressources.",
+            body: "Nous analysons vos besoins, vos processus et vos contraintes pour définir les priorités, les solutions possibles et les choix techniques pertinents.",
+          },
+          {
+            title: "Ingénierie logicielle",
+            statement: "Construire les outils dont votre organisation a réellement besoin.",
+            body: "Applications web et mobiles, logiciels métiers, API et solutions sur mesure conçues autour de vos usages et de votre environnement.",
+          },
+          {
+            title: "Données & automatisation",
+            statement: "Transformer vos données et vos processus en leviers d'action.",
+            body: "Nous automatisons les tâches qui peuvent l'être, structurons vos données et concevons des outils qui facilitent l'analyse, le suivi et la prise de décision.",
+          },
+          {
+            title: "Infrastructure & intégration",
+            statement: "Faire fonctionner vos solutions dans leur environnement réel.",
+            body: "Hébergement, déploiement, interconnexion des systèmes et intégration aux outils existants pour construire un environnement cohérent plutôt qu'un système isolé.",
+          },
+          {
+            title: "Évolution & accompagnement",
+            statement: "Faire évoluer vos solutions au rythme de votre organisation.",
+            body: "Maintenance, amélioration continue, accompagnement technique et évolution des systèmes à mesure que vos besoins changent.",
+          },
+        ],
+      },
     },
     contact: {
       title: "Parlons de ce qui vous préoccupe.",
@@ -365,6 +398,39 @@ export const dict = {
       detailTitle: "The details of each offer will take place here.",
       detailBody:
         "Add for each discipline its scope, deliverables, ways of working, and a sample kick-off.",
+      tech: {
+        label: "Technology",
+        title: "Solutions designed around your reality.",
+        description:
+          "We work across your organization's digital environment — from understanding your needs and building the right solutions to integrating them into your existing environment and evolving them over time.",
+        cards: [
+          {
+            title: "Technology Consulting & Scoping",
+            statement: "Set a clear direction before committing resources.",
+            body: "We assess your needs, processes, and constraints to define priorities, possible solutions, and the technologies best suited to your project.",
+          },
+          {
+            title: "Software Engineering",
+            statement: "Build the tools your organization actually needs.",
+            body: "Web and mobile applications, business software, APIs, and custom solutions designed around your users, your needs, and your environment.",
+          },
+          {
+            title: "Data & Automation",
+            statement: "Turn your data and processes into levers for action.",
+            body: "We automate tasks where it makes sense, structure your data, and build tools that make analysis, monitoring, and decision-making easier.",
+          },
+          {
+            title: "Infrastructure & Integration",
+            statement: "Make your solutions work in their real environment.",
+            body: "Hosting, deployment, system integration, and connectivity with existing tools — creating a coherent environment rather than another isolated system.",
+          },
+          {
+            title: "Evolution & Support",
+            statement: "Help your solutions evolve with your organization.",
+            body: "Maintenance, continuous improvement, technical support, and system evolution as your needs change.",
+          },
+        ],
+      },
     },
     contact: {
       title: "Let’s talk about what’s on your mind.",
