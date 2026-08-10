@@ -59,28 +59,6 @@ export const dict = {
       ],
       detailsCta: "Voir le détail de nos offres →",
     },
-    method: {
-      label: "La méthode",
-      title: "Un processus séquentiel, du diagnostic à l'accompagnement.",
-      steps: [
-        {
-          title: "Comprendre",
-          body: "Immersion dans les processus réels, sans présupposer la solution.",
-        },
-        {
-          title: "Décoder",
-          body: "Traduction du besoin métier en problème technique clairement posé.",
-        },
-        {
-          title: "Concevoir",
-          body: "Conception de solutions durables, dimensionnées à l'organisation.",
-        },
-        {
-          title: "Accompagner",
-          body: "Suivi de l'évolution numérique au-delà de la livraison initiale.",
-        },
-      ],
-    },
     audience: {
       label: "// Pour qui",
       title: "À chaque contexte, sa réponse.",
@@ -124,11 +102,9 @@ export const dict = {
       ],
     },
     stack: {
-      label: "Pile technologique",
       titleStart: "Construire ",
       titleAccent: "sans frontières.",
       lead: "Une pile choisie pour la fiabilité et la longévité, pas pour la mode : des technologies éprouvées, des données solides, un déploiement maîtrisé et une infrastructure pensée pour durer.",
-      note: "Le choix technologique découle toujours du diagnostic, jamais l'inverse.",
     },
     positioning: {
       label: "Positionnement",
@@ -139,7 +115,6 @@ export const dict = {
     },
     about: {
       breadcrumb: "Qui sommes-nous",
-      label: "Qui sommes-nous",
       title: "Le numérique, avec justesse.",
       intro:
         "Inference est une entreprise de conseil, d'ingénierie logicielle et de transformation numérique.",
@@ -407,22 +382,6 @@ export const dict = {
       ],
       detailsCta: "Explore our offerings →",
     },
-    method: {
-      label: "The method",
-      title: "A sequential process, from diagnosis to long-term support.",
-      steps: [
-        {
-          title: "Understand",
-          body: "Immersion in real processes, without presupposing the solution.",
-        },
-        {
-          title: "Decode",
-          body: "Translation of the business need into a clearly framed technical problem.",
-        },
-        { title: "Design", body: "Durable solutions, sized for the organisation." },
-        { title: "Support", body: "Guiding digital evolution well beyond the initial delivery." },
-      ],
-    },
     audience: {
       label: "// Who it's for",
       title: "A different context, a matching response.",
@@ -466,13 +425,9 @@ export const dict = {
       ],
     },
     stack: {
-      label: "Technology stack",
       titleStart: "Build ",
       titleAccent: "without boundaries.",
       lead: "A stack chosen for reliability and longevity, not fashion: proven technologies, solid data, controlled deployment, and infrastructure built to last.",
-      ctaPrimary: "Discuss your project",
-      ctaSecondary: "See the stack",
-      note: "Technology choices always follow the diagnosis, never the other way around.",
     },
     positioning: {
       label: "Positioning",
@@ -483,7 +438,6 @@ export const dict = {
     },
     about: {
       breadcrumb: "Who we are",
-      label: "About Us",
       title: "Digital, with purpose.",
       intro: "Inference is a consulting, software engineering, and digital transformation company.",
       introBody:
