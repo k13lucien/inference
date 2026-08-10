@@ -69,47 +69,95 @@ function AboutContent() {
           </div>
         </section>
 
-        <section className="bg-bg-light py-[90px]">
-          <div className="shell grid gap-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-start">
+        <section className="relative flex min-h-[calc(100svh-140px)] flex-col items-center justify-center overflow-hidden bg-bg-light">
+          <div className="shell flex w-full flex-col items-center">
+            <Reveal className="flex w-full justify-center px-6 py-6">
+              <img
+                src="/logo-sample.svg"
+                alt={t.about.title}
+                className="mx-auto h-auto w-full max-w-[640px] select-none dark:invert"
+                draggable="false"
+              />
+            </Reveal>
+
+            <Reveal delay={140} className="flex flex-col items-center text-center">
+              <div className="max-w-[560px] space-y-5 font-sans text-[15px] leading-[1.8] text-text-body ">
+                <p>{t.about.intro}</p>
+                <p>{t.about.introBody}</p>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        <section className="border-t border-light-gray py-[100px]">
+          <div className="shell grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
             <Reveal>
-              <SectionLabel>{t.about.label}</SectionLabel>
-              <h1 className="max-w-[720px] font-serif text-[clamp(42px,6vw,78px)] font-bold leading-[0.98] text-ink">
-                {t.about.title}
-              </h1>
+              <SectionLabel>{t.about.whyLabel}</SectionLabel>
+              <h2 className="font-serif text-[clamp(31px,4vw,52px)] font-bold leading-[1.08] text-ink">
+                {t.about.whyTitle}
+              </h2>
             </Reveal>
 
             <Reveal
               className="space-y-6 pt-1 font-sans text-[15.5px] leading-[1.8] text-text-body"
               delay={120}
             >
-              <p>{t.about.intro}</p>
-              <p>{t.about.introSample}</p>
+              <p>{t.about.whyBody1}</p>
+              <p>{t.about.whyBody2}</p>
+              <p>{t.about.whyBody3}</p>
             </Reveal>
           </div>
         </section>
 
-        <section className="border-y border-light-gray bg-bg-light py-[84px]">
-          <div className="shell">
-            <Reveal className="max-w-[720px]">
-              <SectionLabel>{t.about.approachLabel}</SectionLabel>
-              <h2 className="font-serif text-[clamp(31px,4vw,52px)] font-bold leading-[1.08] text-ink">
-                {t.about.approachTitle}
+        <section className="relative overflow-hidden bg-bg-dark py-[100px] text-soft-white">
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-40 -right-32 h-[420px] w-[420px] rounded-full border border-gold/20"
+          />
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-52 -left-36 h-[380px] w-[380px] rounded-full border border-gold/15"
+          />
+
+          <div className="shell relative grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
+            <Reveal>
+              <SectionLabel tone="dark">{t.about.positioningLabel}</SectionLabel>
+              <h2 className="font-serif text-[clamp(31px,4vw,52px)] font-bold leading-[1.08]">
+                {t.about.positioningTitle}
               </h2>
             </Reveal>
 
-            <div className="mt-12 grid gap-px overflow-hidden border border-light-gray bg-light-gray md:grid-cols-3">
+            <Reveal
+              className="space-y-6 pt-1 font-sans text-[15.5px] leading-[1.8] text-soft-gray"
+              delay={120}
+            >
+              <p>{t.about.positioningBody1}</p>
+              <p>{t.about.positioningBody2}</p>
+            </Reveal>
+          </div>
+        </section>
+
+        <section className="border-t border-light-gray py-[100px]">
+          <div className="shell">
+            <Reveal>
+              <SectionLabel>{t.about.principlesLabel}</SectionLabel>
+            </Reveal>
+
+            <div className="mt-12 grid gap-px overflow-hidden border border-light-gray bg-light-gray md:grid-cols-2">
               {t.about.principles.map((item, index) => (
                 <Reveal
                   key={item.title}
                   as="article"
                   delay={index * 90}
-                  className="bg-bg-light p-7 md:min-h-[260px]"
+                  className="bg-bg-light p-8 md:min-h-[240px]"
                 >
-                  <p className="font-sans text-[12px] font-medium text-blue">{`0${index + 1}`}</p>
-                  <h3 className="mt-8 font-serif text-[29px] font-semibold leading-[1.05] text-ink">
+                  <p className="font-sans text-[12px] font-medium tracking-[0.14em] text-blue">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-7 font-serif text-[24px] font-semibold leading-[1.1] text-ink">
                     {item.title}
                   </h3>
-                  <p className="mt-5 font-sans text-[14.5px] leading-[1.75] text-text-body">
+                  <p className="mt-4 font-sans text-[14.5px] leading-[1.75] text-text-body">
                     {item.body}
                   </p>
                 </Reveal>
@@ -118,16 +166,42 @@ function AboutContent() {
           </div>
         </section>
 
-        <section className="bg-bg-dark py-[92px] text-soft-white">
-          <div className="shell grid gap-10 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] md:items-end">
+        <section className="border-t border-light-gray py-[100px]">
+          <div className="shell grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
             <Reveal>
-              <SectionLabel tone="dark">{t.about.closingLabel}</SectionLabel>
-              <h2 className="font-serif text-[clamp(32px,5vw,58px)] font-bold leading-[1.05]">
-                {t.about.closingTitle}
+              <SectionLabel>{t.about.teamLabel}</SectionLabel>
+              <h2 className="font-serif text-[clamp(31px,4vw,52px)] font-bold leading-[1.08] text-ink">
+                {t.about.teamTitle}
               </h2>
             </Reveal>
-            <Reveal className="font-sans text-[15.5px] leading-[1.8] text-soft-gray" delay={120}>
-              <p>{t.about.closingBody}</p>
+
+            <Reveal
+              className="space-y-6 pt-1 font-sans text-[15.5px] leading-[1.8] text-text-body"
+              delay={120}
+            >
+              <p>{t.about.teamBody1}</p>
+              <p>{t.about.teamBody2}</p>
+            </Reveal>
+          </div>
+        </section>
+
+        <section className="border-t border-light-gray bg-bg-light py-[110px]">
+          <div className="shell flex flex-col items-center text-center">
+            <Reveal className="max-w-[760px]">
+              <h2 className="font-serif text-[clamp(32px,5vw,58px)] font-bold leading-[1.05] text-ink">
+                {t.about.ctaTitle}
+              </h2>
+              <p className="mt-6 font-sans text-[15.5px] leading-[1.8] text-text-body">
+                {t.about.ctaBody}
+              </p>
+            </Reveal>
+            <Reveal delay={120}>
+              <a
+                href="/contact"
+                className="mt-10 inline-block bg-ink px-8 py-4 font-sans text-[14px] font-medium text-soft-white transition-opacity hover:opacity-85"
+              >
+                {t.about.ctaLink} →
+              </a>
             </Reveal>
           </div>
         </section>

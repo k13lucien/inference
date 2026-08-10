@@ -140,31 +140,53 @@ export const dict = {
     about: {
       breadcrumb: "Qui sommes-nous",
       label: "Qui sommes-nous",
-      title: "Une équipe pensée pour décoder les problèmes complexes.",
+      title: "Le numérique, avec justesse.",
       intro:
-        "Inference accompagne les organisations qui veulent transformer une situation métier complexe en système numérique clair, utile et durable.",
-      introSample:
-        "Cet espace est un contenu exemple : vous pourrez y détailler votre histoire, vos expertises, vos valeurs, votre équipe ou votre manière de travailler.",
-      approachLabel: "Notre approche",
-      approachTitle: "Des principes simples pour cadrer, construire et accompagner.",
+        "Inference est une entreprise de conseil, d'ingénierie logicielle et de transformation numérique.",
+      introBody:
+        "Nous accompagnons les organisations dans leurs évolutions en rapprochant compréhension, technologie et savoir-faire.",
+      whyLabel: "Mission",
+      whyTitle: "Faire du numérique un levier d'évolution.",
+      whyBody1:
+        "Le numérique transforme les façons de travailler, de communiquer et de décider. Mais sa valeur ne réside pas dans les outils eux-mêmes : elle se mesure à ce qu'ils permettent aux organisations d'accomplir.",
+      whyBody2:
+        "Inference accompagne ces évolutions en rapprochant compréhension, technologie et savoir-faire pour apporter des réponses adaptées aux réalités de chaque organisation.",
+      whyBody3:
+        "Notre ambition est simple : contribuer à un numérique utile, cohérent et durable, capable de soutenir les organisations dans ce qu'elles cherchent à accomplir.",
+      positioningLabel: "Notre positionnement",
+      positioningTitle: "Un partenaire de confiance pour vos enjeux numériques.",
+      positioningBody1:
+        "Inference accompagne les organisations dans la résolution de leurs problèmes grâce au numérique, en s'impliquant dans la décision autant que dans son exécution.",
+      positioningBody2:
+        "Nous intervenons là où notre expertise peut être utile, de la réflexion à la mise en œuvre, avec la même attention portée au contexte, aux usages et aux objectifs.",
+      principlesLabel: "Ce qui nous guide",
       principles: [
         {
-          title: "Comprendre avant de construire",
-          body: "Nous partons des usages réels, des contraintes métier et des objectifs mesurables avant de proposer une solution.",
+          title: "Comprendre avant de construire.",
+          body: "Nous donnons d'abord du sens aux questions, pour faire émerger les réponses qui correspondent réellement à votre situation.",
         },
         {
-          title: "Concevoir pour durer",
-          body: "Chaque choix technique doit rester lisible, maintenable et capable d'accompagner l'évolution de l'organisation.",
+          title: "Chaque solution doit créer de la valeur.",
+          body: "Nous construisons des solutions utiles, pensées pour servir vos besoins, vos usages et les ambitions de votre organisation.",
         },
         {
-          title: "Avancer avec clarté",
-          body: "Nous privilégions des décisions explicites, des jalons courts et une communication directe sur les risques.",
+          title: "Un engagement est une responsabilité.",
+          body: "Nous considérons chaque engagement avec la clarté, la rigueur et l'attention qu'il mérite, de la première décision jusqu'à sa réalisation.",
+        },
+        {
+          title: "Chaque décision prépare l'avenir.",
+          body: "Chaque choix est pensé pour faire grandir votre organisation et lui permettre d'aller plus loin.",
         },
       ],
-      closingLabel: "À adapter",
-      closingTitle: "Votre histoire peut prendre place ici.",
-      closingBody:
-        "Ajoutez une présentation plus personnelle, quelques chiffres clés, une citation, ou les profils des personnes qui composent l'équipe. La structure est volontairement simple pour rester facile à modifier.",
+      teamLabel: "L'équipe",
+      teamTitle: "Une équipe à taille humaine.",
+      teamBody1:
+        "Inference réunit des compétences complémentaires en technologie, communication et formation.",
+      teamBody2:
+        "Nous travaillons au plus près des organisations que nous accompagnons, avec des échanges directs et une implication qui s'inscrit dans la durée.",
+      ctaTitle: "Un sujet à faire avancer ?",
+      ctaBody: "Parlons de votre contexte.",
+      ctaLink: "Discuter de votre projet",
     },
     offers: {
       breadcrumb: "Offres",
@@ -461,32 +483,53 @@ export const dict = {
     },
     about: {
       breadcrumb: "Who we are",
-      label: "Who we are",
-      title: "A team built to decode complex problems.",
-      intro:
-        "Inference helps organisations turn complex business situations into clear, useful, durable digital systems.",
-      introSample:
-        "This is sample content: you can later replace it with your story, expertise, values, team, or way of working.",
-      approachLabel: "Our approach",
-      approachTitle: "Simple principles for framing, building, and supporting.",
+      label: "About Us",
+      title: "Digital, with purpose.",
+      intro: "Inference is a consulting, software engineering, and digital transformation company.",
+      introBody:
+        "We support organizations as they evolve, bringing together understanding, technology, and expertise.",
+      whyLabel: "Mission",
+      whyTitle: "Making digital a driver of progress.",
+      whyBody1:
+        "Digital is transforming the way organizations work, communicate, and make decisions. But its value does not lie in the tools themselves; it lies in what they enable organizations to achieve.",
+      whyBody2:
+        "Inference supports these changes by bringing together understanding, technology, and expertise to deliver responses suited to each organization's reality.",
+      whyBody3:
+        "Our ambition is simple: to contribute to digital that is useful, coherent, and built to last — helping organizations move forward in what they seek to accomplish.",
+      positioningLabel: "Our positioning",
+      positioningTitle: "A trusted partner for your digital challenges.",
+      positioningBody1:
+        "Inference helps organizations solve problems through digital, engaging as much in the decisions that shape a solution as in its execution.",
+      positioningBody2:
+        "We step in wherever our expertise can make a difference, from initial thinking through implementation, with the same attention to context, users, and objectives.",
+      principlesLabel: "What guides us",
       principles: [
         {
-          title: "Understand before building",
-          body: "We start from real usage, business constraints, and measurable goals before proposing a solution.",
+          title: "Understand before you build.",
+          body: "We start by giving meaning to the questions, so we can shape responses that truly fit your situation.",
         },
         {
-          title: "Design to last",
-          body: "Every technical choice should stay readable, maintainable, and able to support the organisation as it evolves.",
+          title: "Every solution should create value.",
+          body: "We build useful solutions, designed around your needs, your ways of working, and your organization's ambitions.",
         },
         {
-          title: "Move with clarity",
-          body: "We favour explicit decisions, short milestones, and direct communication about risk.",
+          title: "A commitment is a responsibility.",
+          body: "We approach every commitment with the clarity, rigor, and care it deserves, from the first decision through to delivery.",
+        },
+        {
+          title: "Every decision shapes the future.",
+          body: "Every choice is made to help your organization grow and move further forward.",
         },
       ],
-      closingLabel: "To adapt",
-      closingTitle: "Your story can live here.",
-      closingBody:
-        "Add a more personal introduction, a few key figures, a quote, or the profiles of the people on the team. The structure is intentionally simple so it stays easy to edit.",
+      teamLabel: "Our team",
+      teamTitle: "A close-knit team.",
+      teamBody1:
+        "Inference brings together complementary expertise across technology, communication, and training.",
+      teamBody2:
+        "We work closely with the organizations we support, through direct communication and an involvement that extends over time.",
+      ctaTitle: "A challenge you want to move forward?",
+      ctaBody: "Tell us about your context.",
+      ctaLink: "Discuss your project",
     },
     offers: {
       breadcrumb: "Services",
