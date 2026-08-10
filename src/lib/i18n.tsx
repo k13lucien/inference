@@ -211,6 +211,34 @@ export const dict = {
           },
         ],
       },
+      comm: {
+        label: "Communication",
+        title: "Faire de votre communication un prolongement cohérent de votre organisation.",
+        description:
+          "Nous construisons une expression claire et singulière, de votre identité à la manière dont vous présentez votre activité et échangez avec vos publics.",
+        cards: [
+          {
+            title: "Identité & Branding",
+            statement: "Donner une expression claire à ce que vous êtes.",
+            body: "Positionnement, identité visuelle et éléments de marque pour construire une identité cohérente et reconnaissable.",
+          },
+          {
+            title: "Communication digitale",
+            statement: "Être présent là où vos publics vous cherchent.",
+            body: "Stratégie, présence digitale et gestion des canaux adaptés à votre activité et à vos objectifs.",
+          },
+          {
+            title: "Contenu & Éditorial",
+            statement: "Trouver les mots justes pour être compris.",
+            body: "Création et structuration de contenus qui rendent votre activité, vos idées et vos offres plus claires pour vos publics.",
+          },
+          {
+            title: "Design",
+            statement: "Donner forme à vos idées et à vos messages.",
+            body: "Conception de supports visuels et numériques cohérents avec votre identité et adaptés à leurs usages.",
+          },
+        ],
+      },
     },
     contact: {
       title: "Parlons de ce qui vous préoccupe.",
@@ -428,6 +456,34 @@ export const dict = {
             title: "Evolution & Support",
             statement: "Help your solutions evolve with your organization.",
             body: "Maintenance, continuous improvement, technical support, and system evolution as your needs change.",
+          },
+        ],
+      },
+      comm: {
+        label: "Communication",
+        title: "Make your communication a coherent extension of your organization.",
+        description:
+          "We build a clear and distinctive expression of who you are — from your identity to the way you present your work and engage with your audiences.",
+        cards: [
+          {
+            title: "Identity & Branding",
+            statement: "Give your organization a clear expression.",
+            body: "Positioning, visual identity, and brand assets designed to build a coherent and recognizable identity.",
+          },
+          {
+            title: "Digital Communication",
+            statement: "Be present where your audiences look for you.",
+            body: "Strategy, digital presence, and channel management tailored to your business and objectives.",
+          },
+          {
+            title: "Content & Editorial",
+            statement: "Find the right words to be understood.",
+            body: "Creating and structuring content that makes your work, ideas, and offerings clearer to your audiences.",
+          },
+          {
+            title: "Design",
+            statement: "Give shape to your ideas and messages.",
+            body: "Visual and digital assets designed to reflect your identity and serve their intended purpose.",
           },
         ],
       },

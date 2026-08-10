@@ -2,6 +2,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 
 import { Footer } from "@/components/site/Footer";
+import { Communication } from "@/components/site/Communication";
 import { Header } from "@/components/site/Header";
 import { Method } from "@/components/site/Method";
 import { Reveal } from "@/components/site/Reveal";
@@ -103,6 +104,8 @@ function OffresContent() {
         </section>
 
         <TechGrid />
+
+        <Communication />
 
         <Stack />
 
