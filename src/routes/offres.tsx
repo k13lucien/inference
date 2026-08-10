@@ -7,7 +7,6 @@ import { Communication } from "@/components/site/Communication";
 import { Formation } from "@/components/site/Formation";
 import { Header } from "@/components/site/Header";
 import { Reveal } from "@/components/site/Reveal";
-import { SectionLabel } from "@/components/site/SectionLabel";
 import { Stack } from "@/components/site/Stack";
 import { TechGrid } from "@/components/site/TechGrid";
 import {
