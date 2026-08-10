@@ -80,6 +80,20 @@ const icon = {
       <path d="M7 8.4v7.2M9.4 6.8A5.6 5.6 0 0 1 14.6 11" />
     </>
   ),
+  pen: (
+    <>
+      <path d="m12 19 7-7 3 3-7 7-3-3Z" />
+      <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5Z" />
+      <path d="m2 2 7.586 7.586" />
+      <circle cx="11" cy="11" r="2" />
+    </>
+  ),
+  book: (
+    <>
+      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+    </>
+  ),
 };
 
 const items: Item[] = [
@@ -87,18 +101,17 @@ const items: Item[] = [
   { label: "React", icon: icon.react },
   { label: "Node.js", icon: icon.server },
   { label: "Python", icon: icon.pulse },
-  { label: "Go", icon: icon.bolt },
+  { label: "Java", icon: icon.code },
+  { label: "Spring Boot", icon: icon.server },
+  { label: "Flutter", icon: icon.bolt },
   { label: "PostgreSQL", icon: icon.db },
-  { label: "Redis", icon: icon.bolt },
-  { label: "GraphQL", icon: icon.graph },
   { label: "Docker", icon: icon.box },
-  { label: "Kubernetes", icon: icon.layers },
-  { label: "Terraform", icon: icon.layers },
   { label: "AWS", icon: icon.cloud },
-  { label: "Cloudflare Workers", icon: icon.cloud },
-  { label: "GitHub Actions", icon: icon.git },
-  { label: "Zero Trust", icon: icon.shield },
-  { label: "OpenTelemetry", icon: icon.pulse },
+  { label: "Cloudflare", icon: icon.cloud },
+  { label: "n8n", icon: icon.bolt },
+  { label: "Power BI", icon: icon.graph },
+  { label: "Figma", icon: icon.pen },
+  { label: "Moodle", icon: icon.book },
 ];
 
 /** Tuiles décoratives pivotées, comme sur la référence. */
@@ -155,7 +168,7 @@ export function Stack() {
 
   return (
     <section id="stack" className="bg-bg-light px-2 py-2 max-[560px]:px-0">
-      <div className="relative isolate overflow-hidden bg-bg-dark">
+      <div className="relative isolate overflow-hidden rounded-2xl bg-bg-dark max-[560px]:rounded-xl">
         {/* Texture pointillée */}
         <span
           aria-hidden="true"
@@ -201,20 +214,6 @@ export function Stack() {
             <p className="mx-auto mt-7 max-w-[600px] font-sans text-[15.5px] leading-[1.7] text-soft-white/80">
               {t.stack.lead}
             </p>
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <a
-                href="/#contact"
-                className="inline-flex items-center bg-soft-white px-7 py-[13px] font-sans text-[14.5px] font-medium text-bg-dark transition-opacity hover:opacity-85"
-              >
-                {t.stack.ctaPrimary}
-              </a>
-              <a
-                href="#stack"
-                className="inline-flex items-center border border-soft-white/25 px-7 py-[13px] font-sans text-[14.5px] font-medium text-soft-white transition-colors hover:border-gold hover:text-gold"
-              >
-                {t.stack.ctaSecondary}
-              </a>
-            </div>
           </Reveal>
         </div>
 

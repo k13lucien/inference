@@ -2,10 +2,10 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 
 import { Footer } from "@/components/site/Footer";
+import { Approach } from "@/components/site/Approach";
 import { Communication } from "@/components/site/Communication";
 import { Formation } from "@/components/site/Formation";
 import { Header } from "@/components/site/Header";
-import { Method } from "@/components/site/Method";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
 import { Stack } from "@/components/site/Stack";
@@ -110,23 +110,9 @@ function OffresContent() {
 
         <Formation />
 
+        <Approach />
+
         <Stack />
-
-        <Method />
-
-        <section className="bg-bg-dark py-[92px] text-soft-white">
-          <div className="shell grid gap-10 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] md:items-end">
-            <Reveal>
-              <SectionLabel tone="dark">{t.offers.detailLabel}</SectionLabel>
-              <h2 className="font-serif text-[clamp(32px,5vw,58px)] font-bold leading-[1.05]">
-                {t.offers.detailTitle}
-              </h2>
-            </Reveal>
-            <Reveal className="font-sans text-[15.5px] leading-[1.8] text-soft-gray" delay={120}>
-              <p>{t.offers.detailBody}</p>
-            </Reveal>
-          </div>
-        </section>
       </main>
       <Footer />
     </>

@@ -127,9 +127,7 @@ export const dict = {
       label: "Pile technologique",
       titleStart: "Construire ",
       titleAccent: "sans frontières.",
-      lead: "Une pile choisie pour la fiabilité et la longévité, pas pour la mode : langages typés, données solides, déploiement reproductible et observabilité de bout en bout.",
-      ctaPrimary: "Discuter de votre projet",
-      ctaSecondary: "Voir la pile",
+      lead: "Une pile choisie pour la fiabilité et la longévité, pas pour la mode : des technologies éprouvées, des données solides, un déploiement maîtrisé et une infrastructure pensée pour durer.",
       note: "Le choix technologique découle toujours du diagnostic, jamais l'inverse.",
     },
     positioning: {
@@ -174,10 +172,6 @@ export const dict = {
       hero: "Inference intervient là où vos enjeux rencontrent le numérique : technologie, communication et formation.",
       ctaPrimary: "Discuter de votre projet",
       ctaSecondary: "Explorer nos offres",
-      detailLabel: "À compléter",
-      detailTitle: "Le détail de chaque offre prendra place ici.",
-      detailBody:
-        "Ajoutez pour chaque discipline le périmètre, les livrables, les modalités d'intervention et un exemple de démarrage.",
       tech: {
         label: "Technologie",
         title: "Des solutions pensées pour votre réalité.",
@@ -260,6 +254,39 @@ export const dict = {
             title: "Formation sur mesure",
             statement: "Apprendre à partir de vos propres enjeux.",
             body: "Des parcours construits autour d'un besoin précis, d'un contexte et des objectifs de votre organisation.",
+          },
+        ],
+      },
+      approach: {
+        label: "Notre manière de travailler",
+        title: "Comprendre avant de construire.",
+        subtitle:
+          "Chaque organisation a son contexte, ses contraintes et ses façons de travailler. Nous commençons par les comprendre avant de déterminer la réponse la plus pertinente.",
+        steps: [
+          {
+            title: "Comprendre",
+            statement: "Partir de la réalité.",
+            body: "Nous nous intéressons à vos usages, vos processus, vos contraintes et vos objectifs pour comprendre ce qui doit réellement évoluer.",
+          },
+          {
+            title: "Décoder",
+            statement: "Transformer la complexité en direction claire.",
+            body: "Nous clarifions les enjeux, identifions les priorités et traduisons les besoins en décisions concrètes.",
+          },
+          {
+            title: "Concevoir",
+            statement: "Définir la réponse adaptée.",
+            body: "Nous concevons une approche cohérente avec votre organisation, vos ressources, votre environnement et vos objectifs.",
+          },
+          {
+            title: "Construire",
+            statement: "Donner vie à la solution.",
+            body: "Nous mettons en œuvre la réponse retenue avec le niveau de rigueur nécessaire, qu'il s'agisse de technologie, de communication ou de formation.",
+          },
+          {
+            title: "Accompagner",
+            statement: "Faire évoluer ce qui a été construit.",
+            body: "Nous restons présents lorsque les besoins changent, pour améliorer, ajuster et faire évoluer les solutions avec votre organisation.",
           },
         ],
       },
@@ -399,7 +426,7 @@ export const dict = {
       label: "Technology stack",
       titleStart: "Build ",
       titleAccent: "without boundaries.",
-      lead: "A stack chosen for reliability and longevity, not for hype: typed languages, solid data foundations, reproducible deployments and end-to-end observability.",
+      lead: "A stack chosen for reliability and longevity, not fashion: proven technologies, solid data, controlled deployment, and infrastructure built to last.",
       ctaPrimary: "Discuss your project",
       ctaSecondary: "See the stack",
       note: "Technology choices always follow the diagnosis, never the other way around.",
@@ -446,10 +473,6 @@ export const dict = {
       hero: "Inference works where your challenges meet the digital world: technology, communication, and training.",
       ctaPrimary: "Discuss your project",
       ctaSecondary: "Explore our services",
-      detailLabel: "To be completed",
-      detailTitle: "The details of each offer will take place here.",
-      detailBody:
-        "Add for each discipline its scope, deliverables, ways of working, and a sample kick-off.",
       tech: {
         label: "Technology",
         title: "Solutions designed around your reality.",
@@ -531,6 +554,39 @@ export const dict = {
             title: "Custom Training",
             statement: "Learn from your own challenges.",
             body: "Training programs built around a specific need, context, and set of organizational objectives.",
+          },
+        ],
+      },
+      approach: {
+        label: "Our Approach",
+        title: "Understand before you build.",
+        subtitle:
+          "Every organization has its own context, constraints, and ways of working. We start by understanding them before determining the most relevant response.",
+        steps: [
+          {
+            title: "Understand",
+            statement: "Start from reality.",
+            body: "We look at your users, processes, constraints, and objectives to understand what truly needs to change.",
+          },
+          {
+            title: "Decode",
+            statement: "Turn complexity into clear direction.",
+            body: "We clarify the challenges, identify priorities, and translate needs into concrete decisions.",
+          },
+          {
+            title: "Design",
+            statement: "Define the right response.",
+            body: "We design an approach that fits your organization, resources, environment, and objectives.",
+          },
+          {
+            title: "Build",
+            statement: "Bring the solution to life.",
+            body: "We implement the chosen response with the level of rigor required, whether it involves technology, communication, or training.",
+          },
+          {
+            title: "Support",
+            statement: "Evolve what has been built.",
+            body: "We remain involved as needs change, helping improve, adapt, and evolve your solutions alongside your organization.",
           },
         ],
       },
