@@ -111,7 +111,7 @@ function OffresContent() {
                 { id: "communication", label: t.offers.comm.label },
                 { id: "formation", label: t.offers.formation.label },
               ].map((item, i) => (
-                <li key={item.id} className="border-b border-light-gray sm:border-b-0">
+                <li key={item.id} className="border-b border-light-gray sm:border-b-0 sm:border-r sm:last:border-r-0">
                   <a
                     href={`#${item.id}`}
                     className="group flex items-baseline gap-4 py-6 sm:py-7"
@@ -124,7 +124,7 @@ function OffresContent() {
                     </span>
                     <span
                       aria-hidden="true"
-                      className="ml-auto pr-6 font-sans text-[13px] text-text-muted transition-transform duration-300 group-hover:translate-y-0.5"
+                      className="ml-auto pr-8 font-sans text-[13px] text-text-muted transition-transform duration-300 group-hover:translate-y-0.5"
                     >
                       ↓
                     </span>

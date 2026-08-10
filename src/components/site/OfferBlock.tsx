@@ -50,7 +50,7 @@ export function OfferBlock({
               {`// ${String(index).padStart(2, "0")} — ${label}`}
             </p>
             <h2
-              className={`max-w-[560px] font-serif font-bold leading-[1.02] text-[clamp(36px,4.8vw,58px)] ${heading}`}
+              className={`font-serif font-bold leading-[1.05] text-[clamp(32px,3.9vw,48px)] ${heading}`}
             >
               {title}
             </h2>
