@@ -60,7 +60,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/#contact" className="hover:text-ink">
+                <a href="/contact" className="hover:text-ink">
                   {t.footer.discuss}
                 </a>
               </li>

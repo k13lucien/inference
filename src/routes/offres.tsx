@@ -87,7 +87,7 @@ function OffresContent() {
               </p>
               <div className="flex flex-wrap items-center gap-6">
                 <a
-                  href="/#contact"
+                  href="/contact"
                   className="bg-ink px-6 py-3.5 font-sans text-[14px] font-medium text-soft-white transition-opacity hover:opacity-85"
                 >
                   {t.offers.ctaPrimary}
@@ -102,8 +102,6 @@ function OffresContent() {
             </Reveal>
           </div>
         </section>
-
-
 
         <TechGrid />
 

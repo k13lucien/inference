@@ -18,30 +18,31 @@ export function Approach() {
           </p>
         </Reveal>
 
-        <div className="mt-20 flex flex-col gap-y-12 min-[861px]:flex-row min-[861px]:items-start min-[861px]:gap-x-8">
-          {t.offers.approach.steps.map((step, i) => (
-            <Reveal as="div" key={step.title} delay={i * 100} className="min-[861px]:w-1/5">
-              <div
-                className="min-[861px]:mt-[var(--step-offset)]"
-                style={{ ["--step-offset" as string]: `${i * 56}px` }}
+        <div className="mt-16 border-t border-light-gray">
+          <div className="grid min-[861px]:grid-cols-5">
+            {t.offers.approach.steps.map((step, i) => (
+              <Reveal
+                as="article"
+                key={step.title}
+                delay={i * 80}
+                className="border-b border-light-gray px-6 pb-10 pt-7 max-[860px]:py-6
+                  min-[861px]:border-b-0 min-[861px]:border-l min-[861px]:px-6 min-[861px]:first:border-l-0"
               >
-                <span className="flex items-center gap-3">
-                  <span className="flex h-[30px] w-[30px] shrink-0 items-center justify-center rounded-full border border-blue bg-bg-light font-sans text-[12px] font-medium text-blue">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-blue">
-                    {step.title}
-                  </span>
+                <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full border border-blue font-sans text-[11px] font-medium text-blue">
+                  {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-6 font-serif text-[26px] font-semibold leading-[1.1] text-ink">
+                <span className="mt-5 block font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-blue">
+                  {step.title}
+                </span>
+                <h3 className="mt-4 font-serif text-[21px] font-semibold leading-[1.1] text-ink">
                   {step.statement}
                 </h3>
-                <p className="mt-4 font-sans text-[14.5px] leading-[1.7] text-text-body">
+                <p className="mt-3 font-sans text-[13.5px] leading-[1.7] text-text-body">
                   {step.body}
                 </p>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

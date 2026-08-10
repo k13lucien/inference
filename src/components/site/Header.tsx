@@ -12,7 +12,7 @@ export function Header() {
     { href: "/offres", label: t.nav.offers },
     { href: "/about", label: t.nav.about },
     { label: t.nav.realizations, disabled: true },
-    { href: "/#contact", label: t.nav.contact },
+    { href: "/contact", label: t.nav.contact },
   ];
 
   const controlBase =
@@ -100,7 +100,7 @@ export function Header() {
           )}
           {controls}
           <a
-            href="/#contact"
+            href="/contact"
             className="border border-ink px-4 py-2 font-sans text-[13px] font-medium text-ink transition-colors hover:bg-ink hover:text-soft-white"
           >
             {t.nav.cta}
