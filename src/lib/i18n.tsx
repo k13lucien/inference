@@ -1,9 +1,33 @@
+/**
+ * i18n — Internationalisation du site Inference.
+ *
+ * Ce module centralise tout le contenu éditable (les copies) du site, en français et en anglais.
+ *
+ * ## Structure
+ * - `dict` — l'objet source des textes. Deux entrées strictement parallèles, `fr` et `en`,
+ *   qui doivent partager exactement les mêmes clés. C'est `fr` qui définit le contrat de types.
+ * - `Dict` — le type dérivé de `dict.fr` (`(typeof dict)["fr"]`). Chaque accès `t.…` est
+ *   vérifié par TypeScript au compile-time : une clé manquante fait échouer le build.
+ * - `I18nProvider` — rend la langue courante disponible dans l'arbre React. La langue est
+ *   persistée dans `localStorage` (clé `inference-locale`) et restaurée au chargement.
+ * - `useI18n()` — hook consommé par les composants ; renvoie `{ locale, t, toggleLocale }`.
+ *
+ * ## Conventions d'usage
+ * - Un composant lit les textes via `const { t } = useI18n();` puis `t.<section>.<clé>`.
+ * - Chaque route (accueil, offres, à propos, contact) consomme sa propre branche du dict
+ *   (`t.about.*`, `t.offers.*`, `t.contactPage.*`, …).
+ * - Les sections répétitives (`cards`, `steps`, `principles`, …) sont des tableaux mappés
+ *   dans les composants, avec le même indice pour la même entrée dans chaque langue.
+ * - Ne jamais ajouter une clé sur une seule langue : `fr` et `en` doivent rester des miroirs.
+ */
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 
+/** Type de la langue prise en charge : `"fr"` ou `"en"`. */
 export type Locale = "fr" | "en";
 
 const STORAGE_KEY = "inference-locale";
 
+/** Contenu éditable du site, structuré par route/section, en français et en anglais. */
 export const dict = {
   fr: {
     nav: {
@@ -654,12 +678,17 @@ export const dict = {
 
 export type Dict = (typeof dict)["fr"];
 
+/** Contexte React exposant `{ locale, t, toggleLocale }` aux composants. */
 const I18nContext = createContext<{ locale: Locale; t: Dict; toggleLocale: () => void }>({
   locale: "fr",
   t: dict.fr,
   toggleLocale: () => {},
 });
 
+/**
+ * Fournit la langue courante à l'arbre React.
+ * Restaure la langue depuis `localStorage` au montage et synchronise `document.documentElement.lang`.
+ */
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>("fr");
 
@@ -687,6 +716,10 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   );
 }
 
+/**
+ * Hook d'accès aux textes. À appeler dans un composant sous `I18nProvider` :
+ * `const { t, locale, toggleLocale } = useI18n();`.
+ */
 export function useI18n() {
   return useContext(I18nContext);
 }
