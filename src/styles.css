@@ -7,19 +7,40 @@
 /*
  * Inference — Design system.
  *
+ * Ce fichier centralise la grammaire visuelle du site : palette, typographie,
+ * rythme et animations. Il s'organise en cinq niveaux :
+ *
+ *   1. Tokens source (`--ds-*`)      → valeurs brutes, redéfinies par thème
+ *                                      (`:root` clair / `.dark`).
+ *   2. Alias (`--color-*`, `--font-*`) → noms sémantiques consommés directement
+ *                                      en CSS et dans les SVG inline.
+ *   3. Exposition Tailwind (`@theme inline`) → les mêmes tokens deviennent des
+ *                                      utilitaires : `bg-bg-light`, `text-ink`,
+ *                                      `border-gold`, `font-serif`, …
+ *   4. Base (`@layer base`)          → styles par défaut (body, focus, bordure).
+ *   5. Utilitaires & animations      → `shell` (conteneur), `[data-reveal]`
+ *                                      (scroll reveal), `gear-spin`, `marquee-*`.
+ *
  * Règle typographique fondamentale :
  *   'Cormorant Garamond' EXPRIME les idées (titres, citations, positionnement).
  *   'Inter' EXPLIQUE les idées (paragraphes, UI, labels).
  *   Ne jamais inverser ces rôles.
  *
  * Règle couleur fondamentale :
- *   Fond clair  -> accent bleu uniquement.
- *   Fond sombre -> accent or uniquement.
+ *   Fond clair  -> accent bleu uniquement (`--ds-blue`).
+ *   Fond sombre -> accent or uniquement (`--ds-gold`).
  *   Ne jamais mélanger les deux accents sur un même fond.
+ *
+ * Accessibilité : toutes les animations sont neutralisées sous
+ * `prefers-reduced-motion: reduce`.
  */
 
 :root {
-  /* Palette source — thème clair */
+  /*
+   * Palette source — thème clair.
+   * `--ds-bg-light` (fond principal) et `--ds-bg-dark` (section de contraste)
+   * sont deux rôles distincts ; l'accent suit le fond : bleu sur clair, or sur sombre.
+   */
   --ds-bg-light: #fafaf7;
   --ds-ink: #111111;
   --ds-bg-dark: #111111;
@@ -52,6 +73,11 @@
   --ds-text-body: #c2c2bd;
 }
 
+/*
+ * Alias sémantiques (niveau 2).
+ * Ces variables se résolvent au point d'utilisation, donc les valeurs définies
+ * dans `.dark` ci-dessus sont héritées automatiquement quand le thème sombre est actif.
+ */
 :root {
   /* Alias consommés directement en CSS/SVG */
   --color-bg-light: var(--ds-bg-light);
@@ -70,24 +96,13 @@
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Inter", sans-serif;
 
-  /* Poids autorisés */
-  --weight-serif-semibold: 600;
-  --weight-serif-bold: 700;
+  /* Poids */
   --weight-sans-regular: 400;
-  --weight-sans-medium: 500;
-  --weight-sans-semibold: 600;
 
   /* Layout */
   --container-max: 1120px;
   --container-padding: 40px;
   --container-padding-mobile: 22px;
-
-  /* Rythme vertical */
-  --section-padding-y: 100px;
-  --section-padding-y-hero: 140px;
-
-  /* Bordures / séparateurs */
-  --border-hairline: 1px solid var(--color-light-gray);
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -95,7 +110,13 @@
 }
 
 @theme inline {
-  /* Exposition des tokens ci-dessus en utilitaires Tailwind. */
+  /*
+   * Niveau 3 — exposition Tailwind.
+   * Déclare les tokens ci-dessus comme thème Tailwind, ce qui génère les
+   * utilitaires couleur (`bg-bg-light`, `text-gold`, `border-light-gray`, …)
+   * et typographie (`font-serif`, `font-sans`). Le mot-clé `inline` répète la
+   * valeur (`var(--ds-…)`) dans les utilitaires générés.
+   */
   --color-bg-light: var(--ds-bg-light);
   --color-ink: var(--ds-ink);
   --color-bg-dark: var(--ds-bg-dark);
@@ -113,6 +134,7 @@
 }
 
 @layer base {
+  /* Bordure par défaut partout (héritage Tailwind v4 : `currentColor` remplacé par le gris léger). */
   * {
     border-color: var(--color-light-gray);
   }
@@ -138,8 +160,9 @@
   }
 }
 
+/* Niveau 5 — utilitaires & animations */
 
-/* Conteneur transverse */
+/* Conteneur transverse (max 1120px, padding 40px / 22px mobile) */
 @utility shell {
   width: 100%;
   max-width: var(--container-max);
@@ -153,7 +176,12 @@
   }
 }
 
-/* Scroll reveal transverse */
+/*
+ * Scroll reveal transverse.
+ * Les éléments marqués `[data-reveal]` démarrent invisibles et décalés ; la classe
+ * `[data-reveal="in"]` (posée par le composant `Reveal` via IntersectionObserver)
+ * les rend visibles. Désactivé sous `prefers-reduced-motion`.
+ */
 @layer base {
   [data-reveal] {
     opacity: 0;
@@ -177,7 +205,7 @@
   }
 }
 
-/* Rotation des engrenages du hero (2D, ligne fine) */
+/* Rotation des engrenages du hero (GearIcon, 2D ligne fine) */
 @keyframes gear-spin {
   from {
     transform: rotate(0deg);
@@ -193,7 +221,8 @@
   }
 }
 
-/* Bande défilante — pile technologique */
+/* Bande défilante — pile technologique (Stack). Le track est dupliqué à 200 %
+   et glisse de 50% : la direction est pilotée par `[data-direction="right"]`. */
 @keyframes marquee-left {
   from {
     transform: translateX(0);
