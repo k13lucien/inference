@@ -16,6 +16,13 @@ dist-ssr
 .nitro
 *.local
 
+# Bun (le projet utilise npm)
+bun.lock
+bunfig.toml
+
+# Métadonnées éditeur Lovable
+.lovable/
+
 # Wrangler / Cloudflare
 .wrangler/
 .dev.vars

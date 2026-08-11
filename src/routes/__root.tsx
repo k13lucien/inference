@@ -6,7 +6,7 @@
  * - `RootComponent` fournit les providers partagés à tout l'arbre :
  *   `ThemeProvider` (clair/sombre), `I18nProvider` (fr/en), `QueryClientProvider`.
  * - `NotFoundComponent` / `ErrorComponent` gèrent respectivement le 404 et
- *   les erreurs de rendu (reportées via `reportLovableError`).
+ *   les erreurs de rendu (loggées via `console.error`).
  *
  * ⚠️ Conserver `<Outlet />` : sans lui, aucune route enfant ne se rend.
  */
@@ -19,12 +19,11 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 import { Toaster } from "@/components/ui/sonner";
 import appCss from "../styles.css?url";
 import { I18nProvider, useI18n } from "@/lib/i18n";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 import { ThemeProvider, useTheme } from "@/lib/theme";
 
 function NotFoundComponent() {
@@ -56,9 +55,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-bg-light px-6">
@@ -104,7 +100,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         name: "description",
         content: "Conseil et ingénierie logicielle pour organisations en évolution numérique.",
       },
-      { name: "author", content: "Lovable" },
+      { name: "author", content: "Inference" },
       { property: "og:title", content: "Inference · Your Tech Partner" },
       {
         property: "og:description",
@@ -112,7 +108,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {

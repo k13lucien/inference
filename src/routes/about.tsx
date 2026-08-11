@@ -69,7 +69,6 @@ function AboutContent() {
           </div>
         </section>
 
-
         <section className="border-t border-light-gray py-[100px]">
           <div className="shell grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
             <Reveal>
