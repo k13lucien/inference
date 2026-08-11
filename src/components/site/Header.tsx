@@ -89,7 +89,7 @@ export function Header() {
           className="shrink-0 font-serif text-[19px] font-semibold whitespace-nowrap text-ink max-[420px]:text-[17px]"
         >
           Inference
-          <span className="max-[420px]:hidden">
+          <span className="max-[1180px]:hidden">
             {" "}
             <span className="text-text-muted">·</span> Your Tech Partner
           </span>
