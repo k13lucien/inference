@@ -23,7 +23,7 @@ import { useEffect, type ReactNode } from "react";
 
 import { Toaster } from "@/components/ui/sonner";
 import appCss from "../styles.css?url";
-import { I18nProvider } from "@/lib/i18n";
+import { I18nProvider, useI18n } from "@/lib/i18n";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { ThemeProvider, useTheme } from "@/lib/theme";
 
