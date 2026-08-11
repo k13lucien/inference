@@ -1,3 +1,13 @@
+/**
+ * Route `/services` — page « Offres ».
+ *
+ * Détaille les offres d'Inference : technologie (TechGrid), communication,
+ * formation, démarche (Approach) et pile technologique (Stack).
+ * Le contenu éditable provient de `t.offers.*`.
+ *
+ * Les providers (`ThemeProvider`, `I18nProvider`) sont posés une seule fois
+ * dans `__root.tsx` : cette route ne fait que rendre ses sections.
+ */
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 
@@ -17,34 +27,27 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { I18nProvider, useI18n } from "@/lib/i18n";
-import { ThemeProvider } from "@/lib/theme";
+import { useI18n } from "@/lib/i18n";
 
-export const Route = createFileRoute("/offres")({
+export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Inference · Offres" },
+      { title: "Inference · Services" },
       { name: "description", content: "Inference offers page." },
-      { property: "og:title", content: "Inference · Offres" },
+      { property: "og:title", content: "Inference · Services" },
       { property: "og:description", content: "Inference offers page." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Offres,
+  component: Services,
 });
 
-function Offres() {
-  return (
-    <ThemeProvider>
-      <I18nProvider>
-        <OffresContent />
-      </I18nProvider>
-    </ThemeProvider>
-  );
+function Services() {
+  return <ServicesContent />;
 }
 
-function OffresContent() {
+function ServicesContent() {
   const { t, locale } = useI18n();
 
   useEffect(() => {

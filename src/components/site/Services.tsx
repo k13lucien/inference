@@ -9,7 +9,7 @@ export function Services() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section id="offres" className="border-t border-light-gray py-[100px]">
+    <section id="services" className="border-t border-light-gray py-[100px]">
       <div className="shell">
         <Reveal className="max-w-[720px]">
           <SectionLabel>{t.services.label}</SectionLabel>
@@ -59,7 +59,7 @@ export function Services() {
                       {card.body}
                     </p>
                     <Link
-                      to="/offres"
+                      to="/services"
                       tabIndex={isOpen ? 0 : -1}
                       className="mt-8 w-fit font-sans text-[12px] font-medium uppercase tracking-[0.18em] text-blue hover:underline"
                     >

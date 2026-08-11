@@ -1,3 +1,14 @@
+/**
+ * Route `/` — page d'accueil.
+ *
+ * Compose la page de marketing : hero, philosophie, services (accordéon),
+ * audience, présence géographique, positionnement et appel à l'action.
+ * Chaque bloc est un composant de `components/site` ; le contenu éditable
+ * provient du dict i18n (`t.hero.*`, `t.problem.*`, …).
+ *
+ * Les providers (`ThemeProvider`, `I18nProvider`) sont posés une seule fois
+ * dans `__root.tsx` : cette route ne fait que rendre ses sections.
+ */
 import { createFileRoute } from "@tanstack/react-router";
 
 import { Header } from "@/components/site/Header";
@@ -10,8 +21,6 @@ import { Region } from "@/components/site/Region";
 import { Positioning } from "@/components/site/Positioning";
 import { ContactCta } from "@/components/site/ContactCta";
 import { Footer } from "@/components/site/Footer";
-import { I18nProvider } from "@/lib/i18n";
-import { ThemeProvider } from "@/lib/theme";
 
 const title = "Inference · Conseil & ingénierie logicielle";
 const description =
@@ -33,21 +42,19 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <ThemeProvider>
-      <I18nProvider>
-        <Header />
-        <main>
-          <Hero />
-          <Problem />
-          <Services />
-          <Audience />
-          <Region />
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Problem />
+        <Services />
+        <Audience />
+        <Region />
 
-          <Positioning />
-          <ContactCta />
-        </main>
-        <Footer />
-      </I18nProvider>
-    </ThemeProvider>
+        <Positioning />
+        <ContactCta />
+      </main>
+      <Footer />
+    </>
   );
 }

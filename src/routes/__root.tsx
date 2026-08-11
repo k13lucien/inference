@@ -1,3 +1,15 @@
+/**
+ * Route racine `__root` — coquille applicative.
+ *
+ * C'est le seul layout : il enveloppe toutes les routes.
+ * - `RootShell` pose `<html>`, `<head>` (SEO via `HeadContent`) et `<body>`.
+ * - `RootComponent` fournit les providers partagés à tout l'arbre :
+ *   `ThemeProvider` (clair/sombre), `I18nProvider` (fr/en), `QueryClientProvider`.
+ * - `NotFoundComponent` / `ErrorComponent` gèrent respectivement le 404 et
+ *   les erreurs de rendu (reportées via `reportLovableError`).
+ *
+ * ⚠️ Conserver `<Outlet />` : sans lui, aucune route enfant ne se rend.
+ */
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -10,7 +22,9 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import { I18nProvider } from "@/lib/i18n";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { ThemeProvider } from "@/lib/theme";
 
 function NotFoundComponent() {
   return (
@@ -130,9 +144,13 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
-    <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
-    </QueryClientProvider>
+    <ThemeProvider>
+      <I18nProvider>
+        <QueryClientProvider client={queryClient}>
+          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+          <Outlet />
+        </QueryClientProvider>
+      </I18nProvider>
+    </ThemeProvider>
   );
 }

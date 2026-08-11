@@ -19,3 +19,15 @@ is `src/routes/__root.tsx`.
 | `__root.tsx` | app shell — wraps every page; preserve `<Outlet />` |
 
 `routeTree.gen.ts` is auto-generated. Don't edit it by hand.
+
+## Routes actuelles du site
+
+| File | URL | Page |
+| --- | --- | --- |
+| `index.tsx` | `/` | Accueil — marketing |
+| `services.tsx` | `/services` | Offres (Technologie, Communication, Formation) |
+| `about.tsx` | `/about` | Qui sommes-nous |
+| `contact.tsx` | `/contact` | Contact + formulaire |
+
+Les slugs d'URL sont en anglais (`/services`, `/about`, `/contact`) ; les
+libellés affichés (navigation, titres) restent localisés via `lib/i18n.tsx`.

@@ -1,3 +1,13 @@
+/**
+ * Route `/about` — page « Qui sommes-nous ».
+ *
+ * Présente la mission, le positionnement, les principes et l'équipe d'Inference.
+ * Le titre de document est localisé (`useEffect` sur `locale`) ; le contenu
+ * provient de `t.about.*`.
+ *
+ * Les providers (`ThemeProvider`, `I18nProvider`) sont posés une seule fois
+ * dans `__root.tsx` : cette route ne fait que rendre ses sections.
+ */
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 
@@ -13,8 +23,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { I18nProvider, useI18n } from "@/lib/i18n";
-import { ThemeProvider } from "@/lib/theme";
+import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -31,13 +40,7 @@ export const Route = createFileRoute("/about")({
 });
 
 function About() {
-  return (
-    <ThemeProvider>
-      <I18nProvider>
-        <AboutContent />
-      </I18nProvider>
-    </ThemeProvider>
-  );
+  return <AboutContent />;
 }
 
 function AboutContent() {
@@ -200,7 +203,7 @@ function AboutContent() {
                 href="/contact"
                 className="mt-10 inline-block bg-ink px-8 py-4 font-sans text-[14px] font-medium text-soft-white transition-opacity hover:opacity-85"
               >
-                {t.about.ctaLink} →
+                {t.about.ctaLink}
               </a>
             </Reveal>
           </div>
