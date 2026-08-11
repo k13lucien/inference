@@ -47,18 +47,20 @@ function AboutContent() {
       <main>
         <PageBreadcrumb current={t.about.breadcrumb} />
 
-        <section className="relative flex min-h-[calc(100svh-140px)] flex-col items-center justify-center overflow-hidden bg-bg-light">
+        <section className="relative overflow-hidden bg-bg-light py-[86px] max-[560px]:py-14">
           <div className="shell flex w-full flex-col items-center">
-            <Reveal className="flex w-full justify-center px-6 py-6">
+            <h1 className="sr-only">{t.about.title}</h1>
+
+            <Reveal className="flex w-full justify-center">
               <img
                 src="/logo-sample.svg"
                 alt={t.about.title}
-                className="mx-auto h-auto w-full max-w-[640px] select-none dark:invert"
+                className="mx-auto h-auto w-full max-w-[480px] select-none dark:invert"
                 draggable="false"
               />
             </Reveal>
 
-            <Reveal delay={140} className="flex flex-col items-center text-center">
+            <Reveal delay={140} className="mt-12 flex flex-col items-center text-center">
               <div className="max-w-[560px] space-y-5 font-sans text-[15px] leading-[1.8] text-text-body ">
                 <p>{t.about.intro}</p>
                 <p>{t.about.introBody}</p>
@@ -66,6 +68,7 @@ function AboutContent() {
             </Reveal>
           </div>
         </section>
+
 
         <section className="border-t border-light-gray py-[100px]">
           <div className="shell grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">

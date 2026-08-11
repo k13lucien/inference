@@ -127,12 +127,15 @@ export function OffersAccordion({
                   <span
                     aria-hidden="true"
                     className={[
-                      `shrink-0 font-sans text-[24px] font-light leading-none ${c.plus}`,
+                      `mt-1 shrink-0 ${c.plus}`,
                       "transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]",
                       isOpen ? "rotate-45" : "rotate-0",
                     ].join(" ")}
                   >
-                    +
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <line x1="9" y1="1" x2="9" y2="17" stroke="currentColor" strokeWidth="1.3" />
+                      <line x1="1" y1="9" x2="17" y2="9" stroke="currentColor" strokeWidth="1.3" />
+                    </svg>
                   </span>
                 </button>
                 <div

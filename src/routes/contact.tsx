@@ -114,6 +114,23 @@ function ContactContent() {
                   </a>
                 </li>
               </ul>
+
+              <div className="mt-12 border-t border-light-gray pt-8">
+                <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-blue">
+                  {t.contactPage.assuranceLabel}
+                </p>
+                <ul className="mt-6 space-y-4">
+                  {t.contactPage.assurances.map((item) => (
+                    <li
+                      key={item}
+                      className="flex gap-4 font-sans text-[14.5px] leading-[1.7] text-text-body"
+                    >
+                      <span aria-hidden="true" className="mt-[9px] h-px w-4 shrink-0 bg-blue" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </Reveal>
 
             <Reveal delay={100}>
