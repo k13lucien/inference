@@ -1,3 +1,9 @@
+/**
+ * Approach — section « Notre manière de travailler » de la route `/services`.
+ *
+ * Déroule les cinq étapes de la démarche (`t.offers.approach.steps`, « Comprendre →
+ * Décoder → Concevoir → Construire → Accompagner ») dans une grille animée au scroll.
+ */
 import { useI18n } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 import { SectionLabel } from "./SectionLabel";

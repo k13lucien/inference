@@ -1,3 +1,9 @@
+/**
+ * Region — section d'accueil « Proche de vous, où que vous soyez » (`t.region.*`).
+ *
+ * Affiche le globe animé (`Globe`) côté visuel et trois cartes « réseau de diffusion ».
+ * Coupe l'animation du globe si `prefers-reduced-motion: reduce`.
+ */
 import { useI18n } from "@/lib/i18n";
 import { Globe } from "./Globe";
 import { Reveal } from "./Reveal";

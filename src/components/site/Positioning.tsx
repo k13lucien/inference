@@ -1,3 +1,8 @@
+/**
+ * Positioning — section d'accueil « Positionnement » (`t.positioning.*`).
+ *
+ * Fond sombre (règles de tokens : accent or sur fond sombre).
+ */
 import { useI18n } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 import { SectionLabel } from "./SectionLabel";

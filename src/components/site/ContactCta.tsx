@@ -1,3 +1,9 @@
+/**
+ * ContactCta — section d'accueil « Contact » (ancre `#contact`).
+ *
+ * Réutilise le formulaire partagé `ContactForm` (même composant que la route
+ * `/contact`) sans le champ organisation. Boutons du `Hero` pointent ici.
+ */
 import { useI18n } from "@/lib/i18n";
 
 import { ContactForm } from "./ContactForm";

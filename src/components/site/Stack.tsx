@@ -1,3 +1,9 @@
+/**
+ * Stack — section « pile technologique » de la route `/services` (`t.stack.*`).
+ *
+ * Grille d'icônes 2D (trait fin) + labels, animée au scroll. Aucun texte éditable
+ * en dur : tout provient du dict i18n.
+ */
 import type { ReactElement } from "react";
 
 import { useI18n } from "@/lib/i18n";

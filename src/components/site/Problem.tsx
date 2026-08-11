@@ -1,3 +1,9 @@
+/**
+ * Problem — section d'accueil « Notre philosophie » (`t.problem.*`).
+ *
+ * Trois paragraphes de positionnement (ancre `#constat`), mis en page sur deux
+ * colonnes avec le label de section.
+ */
 import { useI18n } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 import { SectionLabel } from "./SectionLabel";

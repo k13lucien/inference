@@ -1,3 +1,9 @@
+/**
+ * Hero — section d'accueil (ancre `#top`).
+ *
+ * Titre accentué (`t.hero.*`), visuel engrenage (`GearIcon`) en filigrane et CTA
+ * qui pointe vers la section contact de la page d'accueil (`#contact`).
+ */
 import { useI18n } from "@/lib/i18n";
 import { Gear } from "./GearIcon";
 import { Reveal } from "./Reveal";

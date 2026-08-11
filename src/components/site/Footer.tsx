@@ -1,3 +1,10 @@
+/**
+ * Footer — pied de page commun à toutes les routes.
+ *
+ * Trois colonnes : identité + tagline, navigation secondaire, canaux de contact.
+ * La navigation interne utilise des `<Link>` TanStack (préchargement, hash supporté
+ * pour « Pour qui » → `/#pour-qui`).
+ */
 import { Link } from "@tanstack/react-router";
 
 import { useI18n } from "@/lib/i18n";

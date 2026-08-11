@@ -1,6 +1,13 @@
+/**
+ * Globe — globe terrestre animé (canvas) en points, utilisé par `Region`.
+ *
+ * Place des points uniquement sur les continents via le masque `lib/land-mask.ts`
+ * (échantillonnage égal-aire), puis anime la rotation. Le respect de
+ * `prefers-reduced-motion` est géré à l'appelant (`Region`).
+ */
 import { useEffect, useRef } from "react";
 
-import { isLand } from "./land-mask";
+import { isLand } from "@/lib/land-mask";
 
 type Dot = { x: number; y: number; z: number };
 
@@ -96,11 +103,7 @@ export function Globe({ className }: { className?: string }) {
         for (let lat = -90; lat <= 90; lat += 3) {
           const la = (lat * Math.PI) / 180;
           const lo = (lon * Math.PI) / 180;
-          const p = project(
-            Math.cos(la) * Math.sin(lo),
-            Math.sin(la),
-            Math.cos(la) * Math.cos(lo),
-          );
+          const p = project(Math.cos(la) * Math.sin(lo), Math.sin(la), Math.cos(la) * Math.cos(lo));
           if (p.z < 0) {
             started = false;
             continue;
@@ -117,11 +120,7 @@ export function Globe({ className }: { className?: string }) {
         for (let lon = -180; lon <= 180; lon += 3) {
           const la = (lat * Math.PI) / 180;
           const lo = (lon * Math.PI) / 180;
-          const p = project(
-            Math.cos(la) * Math.sin(lo),
-            Math.sin(la),
-            Math.cos(la) * Math.cos(lo),
-          );
+          const p = project(Math.cos(la) * Math.sin(lo), Math.sin(la), Math.cos(la) * Math.cos(lo));
           if (p.z < 0) {
             started = false;
             continue;

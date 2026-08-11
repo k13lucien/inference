@@ -1,3 +1,10 @@
+/**
+ * Header — en-tête collant commun à toutes les routes.
+ *
+ * Logo (lien racine), navigation principale (`nav`, d'abord la liste `nav` typée
+ * pour les `<Link>` TanStack), contrôles langue/theme et CTA vers `/contact`.
+ * Menu mobile dépliable (`useState open`), fermé à la navigation.
+ */
 import { useState } from "react";
 
 import { Link } from "@tanstack/react-router";

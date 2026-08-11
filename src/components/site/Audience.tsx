@@ -1,3 +1,9 @@
+/**
+ * Audience — section d'accueil « Pour qui » (`t.audience.*`).
+ *
+ * Liste les types d'organisations accompagnées (PME, organisations en transformation,
+ * startups, équipes internes).
+ */
 import { useI18n } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 import { SectionLabel } from "./SectionLabel";

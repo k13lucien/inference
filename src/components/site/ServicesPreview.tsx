@@ -1,10 +1,17 @@
+/**
+ * ServicesPreview — aperçu des offres sur la page d'accueil (`t.services.*`).
+ *
+ * Accordéon « horizontal » sur desktop (panneaux qui s'étendent au hover/click) et
+ * accordéon empilé sur mobile. Ancre `#services` ; le CTA du panneau ouvre la route
+ * `/services`. Ne pas confondre avec `OffersAccordion` (page `/services`).
+ */
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 import { SectionLabel } from "./SectionLabel";
 
-export function Services() {
+export function ServicesPreview() {
   const { t } = useI18n();
   const [open, setOpen] = useState(0);
 
