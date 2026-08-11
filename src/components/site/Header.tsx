@@ -83,27 +83,37 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-light-gray bg-bg-light/90 backdrop-blur-[6px]">
-      <div className="shell flex h-[76px] items-center justify-between">
-        <Link to="/" className="font-serif text-[19px] font-semibold text-ink">
-          Inference <span className="text-text-muted">·</span> Your Tech Partner
+      <div className="shell flex h-[76px] items-center justify-between gap-6">
+        <Link
+          to="/"
+          className="shrink-0 font-serif text-[19px] font-semibold whitespace-nowrap text-ink max-[420px]:text-[17px]"
+        >
+          Inference
+          <span className="max-[1180px]:hidden">
+            {" "}
+            <span className="text-text-muted">·</span> Your Tech Partner
+          </span>
         </Link>
 
-        <nav aria-label={t.nav.main} className="hidden items-center gap-9 md:flex">
+        <nav aria-label={t.nav.main} className="hidden items-center gap-7 md:flex lg:gap-9">
           {nav.map((item) =>
             item.disabled ? (
               <span
                 key={item.label}
                 aria-disabled="true"
-                title="Non disponible actuellement"
-                className="font-sans text-[14px] text-text-muted opacity-55"
+                title={t.nav.soonTitle}
+                className="flex items-baseline gap-2 font-sans text-[14px] whitespace-nowrap text-text-muted"
               >
                 {item.label}
+                <span className="border border-light-gray px-1.5 py-px font-sans text-[9px] font-medium uppercase tracking-[0.16em] text-text-muted">
+                  {t.nav.soon}
+                </span>
               </span>
             ) : (
               <Link
                 key={item.to}
                 to={item.to}
-                className="group relative font-sans text-[14px] text-text-secondary transition-colors hover:text-ink"
+                className="group relative font-sans text-[14px] whitespace-nowrap text-text-secondary transition-colors hover:text-ink"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 h-px w-0 bg-blue transition-[width] duration-200 group-hover:w-full" />
@@ -113,7 +123,7 @@ export function Header() {
           {controls}
           <Link
             to="/contact"
-            className="border border-ink px-4 py-2 font-sans text-[13px] font-medium text-ink transition-colors hover:bg-ink hover:text-soft-white"
+            className="border border-ink px-4 py-2 font-sans text-[13px] font-medium whitespace-nowrap text-ink transition-colors hover:bg-ink hover:text-soft-white"
           >
             {t.nav.cta}
           </Link>
@@ -136,13 +146,16 @@ export function Header() {
         <nav aria-label={t.nav.mobile} className="border-t border-light-gray bg-bg-light md:hidden">
           <ul className="shell flex flex-col py-3">
             {nav.map((item) => (
-              <li key={item.to ?? item.label} className="border-b border-light-gray last:border-0">
+              <li key={item.to ?? item.label} className="border-b border-light-gray">
                 {item.disabled ? (
                   <span
                     aria-disabled="true"
-                    className="block py-3.5 font-sans text-[15px] text-text-muted opacity-55"
+                    className="flex items-center gap-3 py-3.5 font-sans text-[15px] text-text-muted"
                   >
                     {item.label}
+                    <span className="border border-light-gray px-1.5 py-px font-sans text-[9px] font-medium uppercase tracking-[0.16em]">
+                      {t.nav.soon}
+                    </span>
                   </span>
                 ) : (
                   <Link
@@ -155,6 +168,15 @@ export function Header() {
                 )}
               </li>
             ))}
+            <li className="pt-5 pb-2">
+              <Link
+                to="/contact"
+                onClick={() => setOpen(false)}
+                className="block bg-ink px-4 py-3.5 text-center font-sans text-[14px] font-medium text-soft-white"
+              >
+                {t.nav.cta}
+              </Link>
+            </li>
           </ul>
         </nav>
       )}
