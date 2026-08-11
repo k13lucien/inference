@@ -44,8 +44,7 @@ export const dict = {
       mobile: "Navigation mobile",
       themeLabel: "Basculer le thème clair / sombre",
       langLabel: "Changer la langue",
-      soon: "Bientôt",
-      soonTitle: "Bientôt disponible",
+      soonTitle: "Pas encore disponible",
     },
     notFound: {
       code: "404",
@@ -374,7 +373,6 @@ export const dict = {
       mobile: "Mobile navigation",
       themeLabel: "Toggle light / dark theme",
       langLabel: "Change language",
-      soon: "Soon",
       soonTitle: "Coming soon",
     },
     notFound: {

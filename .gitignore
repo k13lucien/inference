@@ -37,3 +37,4 @@ bunfig.toml
 *.njsproj
 *.sln
 *.sw?
+.vercel

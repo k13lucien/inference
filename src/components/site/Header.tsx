@@ -102,12 +102,9 @@ export function Header() {
                 key={item.label}
                 aria-disabled="true"
                 title={t.nav.soonTitle}
-                className="flex items-baseline gap-2 font-sans text-[14px] whitespace-nowrap text-text-muted"
+                className="font-sans text-[14px] whitespace-nowrap text-text-muted"
               >
                 {item.label}
-                <span className="border border-light-gray px-1.5 py-px font-sans text-[9px] font-medium uppercase tracking-[0.16em] text-text-muted">
-                  {t.nav.soon}
-                </span>
               </span>
             ) : (
               <Link
@@ -150,12 +147,9 @@ export function Header() {
                 {item.disabled ? (
                   <span
                     aria-disabled="true"
-                    className="flex items-center gap-3 py-3.5 font-sans text-[15px] text-text-muted"
+                    className="block py-3.5 font-sans text-[15px] text-text-muted"
                   >
                     {item.label}
-                    <span className="border border-light-gray px-1.5 py-px font-sans text-[9px] font-medium uppercase tracking-[0.16em]">
-                      {t.nav.soon}
-                    </span>
                   </span>
                 ) : (
                   <Link
