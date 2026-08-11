@@ -1,3 +1,11 @@
+/**
+ * Input — champ `<input>` shadcn/ui.
+ *
+ * ⚠️ Design system : le style par défaut (bordure pleine, coins arrondis) ne
+ * correspond pas au design « soulignement » du site. `ContactForm` surcharge la
+ * classe par `underline` (`border-0 border-b …`) grâce à `cn`/`twMerge` qui
+ * résout les conflits (dernière classe gagnante).
+ */
 import * as React from "react";
 
 import { cn } from "@/lib/utils";

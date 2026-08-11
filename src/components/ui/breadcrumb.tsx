@@ -1,3 +1,15 @@
+/**
+ * Breadcrumb — fil d'Ariane shadcn/ui.
+ *
+ * Utilisé par les trois pages internes (`/services`, `/about`, `/contact`) :
+ * Accueil → page courante. Le lien « Accueil » passe par `<BreadcrumbLink asChild>`
+ * pour rendre un `<Link>` de TanStack ; la page courante est un
+ * `<BreadcrumbPage>` (rôle `link`, `aria-current="page"`).
+ *
+ * ⚠️ Design system : les classes par défaut référencent `text-foreground` /
+ * `text-muted-foreground` (tokens shadcn non définis) ; chaque usage surcharge
+ * donc la couleur via `className` (`text-ink`, `text-text-muted`, …).
+ */
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { ChevronRight, MoreHorizontal } from "lucide-react";

@@ -1,3 +1,14 @@
+/**
+ * Form — wrapper metadata/formulaire shadcn/ui au-dessus de react-hook-form.
+ *
+ * `Form` = le `FormProvider` de RHF ; `FormField` = un `Controller` typé.
+ * `FormItem` fournit un identifiant unique, et `FormControl` relie automatiquement
+ * le champ : `id`, `aria-invalid`, et `aria-describedby` qui pointe vers
+ * `FormMessage` en cas d'erreur (accessibilité clavier / lecteur d'écran).
+ *
+ * Utilisé par `ContactForm` avec un schéma `zod` (résolveur `zodResolver`).
+ * `FormMessage` est surchargé en `text-blue` pour coller au design system.
+ */
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { Slot } from "@radix-ui/react-slot";

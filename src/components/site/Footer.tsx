@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router";
+
 import { useI18n } from "@/lib/i18n";
 
 export function Footer() {
@@ -22,19 +24,19 @@ export function Footer() {
             </h2>
             <ul className="mt-5 space-y-3 font-sans text-[14px] text-text-secondary">
               <li>
-                <a href="/about" className="hover:text-ink">
+                <Link to="/about" className="hover:text-ink">
                   {t.nav.about}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services" className="hover:text-ink">
+                <Link to="/services" className="hover:text-ink">
                   {t.nav.offers}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#pour-qui" className="hover:text-ink">
+                <Link to="/" hash="pour-qui" className="hover:text-ink">
                   {t.nav.audience}
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -60,9 +62,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/contact" className="hover:text-ink">
+                <Link to="/contact" className="hover:text-ink">
                   {t.footer.discuss}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -70,9 +72,9 @@ export function Footer() {
 
         <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-light-gray pt-6 font-sans text-[13px] text-text-muted">
           <p>{t.footer.rights}</p>
-          <a href="/" className="hover:text-ink">
+          <Link to="/" className="hover:text-ink">
             {t.footer.legal}
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

@@ -1,29 +1,23 @@
 /**
  * Route `/contact` — page de contact.
  *
- * Affiche les canaux directs (email, LinkedIn, WhatsApp) et un formulaire.
- * La validation est côté client uniquement (`validate` + `errors`) ; il n'y a
- * pas encore de backend : la soumission se limite à `console.log`.
+ * Affiche les canaux directs (email, LinkedIn, WhatsApp) et le formulaire de
+ * contact partagé (`ContactForm`, validation zod côté client). Il n'y a pas
+ * encore de backend : la soumission se limite à un toast `sonner`.
  *
  * Les providers (`ThemeProvider`, `I18nProvider`) sont posés une seule fois
  * dans `__root.tsx` : cette route ne fait que rendre ses sections.
  */
-import { Link, createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { createFileRoute } from "@tanstack/react-router";
 
+import { ContactForm } from "@/components/site/ContactForm";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
+import { PageBreadcrumb } from "@/components/site/PageBreadcrumb";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 import { useI18n } from "@/lib/i18n";
+import { useDocumentTitle } from "@/lib/useDocumentTitle";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -43,73 +37,16 @@ function Contact() {
   return <ContactContent />;
 }
 
-type FormValues = { name: string; email: string; organisation: string; message: string };
-type Errors = Partial<Record<keyof FormValues, string>>;
-
 function ContactContent() {
-  const { t, locale } = useI18n();
+  const { t } = useI18n();
 
-  const [values, setValues] = useState<FormValues>({
-    name: "",
-    email: "",
-    organisation: "",
-    message: "",
-  });
-  const [errors, setErrors] = useState<Errors>({});
-  const [touched, setTouched] = useState(false);
-
-  useEffect(() => {
-    document.title = locale === "fr" ? "Contact · Inference" : "Contact · Inference";
-  }, [locale]);
-
-  const validate = (v: FormValues): Errors => {
-    const e: Errors = {};
-    if (!v.name.trim()) e.name = t.contactPage.required;
-    if (!v.email.trim()) e.email = t.contactPage.required;
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email)) e.email = t.contactPage.invalidEmail;
-    if (!v.message.trim()) e.message = t.contactPage.required;
-    return e;
-  };
-
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const e = validate(values);
-    setErrors(e);
-    setTouched(true);
-    if (Object.keys(e).length === 0) {
-      // Pas de backend : aucune soumission réelle.
-      console.log("contact", values);
-    }
-  };
-
-  const field =
-    "w-full border-0 border-b border-light-gray bg-transparent py-3 font-sans text-[15px] text-ink outline-none transition-colors placeholder:text-text-muted focus:border-blue";
-
-  const set =
-    (key: keyof FormValues) => (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-      setValues({ ...values, [key]: event.target.value });
+  useDocumentTitle("Contact · Inference", "Contact · Inference");
 
   return (
     <>
       <Header />
       <main>
-        <section className="border-b border-light-gray bg-bg-light py-7">
-          <div className="shell">
-            <Breadcrumb>
-              <BreadcrumbList className="font-sans text-[13px] text-text-muted">
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild className="hover:text-ink">
-                    <Link to="/">{t.nav.home}</Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="text-light-gray" />
-                <BreadcrumbItem>
-                  <BreadcrumbPage className="text-ink">{t.contactPage.breadcrumb}</BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          </div>
-        </section>
+        <PageBreadcrumb current={t.contactPage.breadcrumb} />
 
         <section className="bg-bg-light py-[110px]">
           <div className="shell flex flex-col items-center text-center">
@@ -185,84 +122,9 @@ function ContactContent() {
                 {t.contactPage.formTitle}
               </h2>
 
-              <form onSubmit={onSubmit} noValidate className="mt-10 space-y-7">
-                <div>
-                  <label htmlFor="name" className="sr-only">
-                    {t.contactPage.name}
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    className={field}
-                    placeholder={t.contactPage.name}
-                    value={values.name}
-                    onChange={set("name")}
-                    aria-invalid={Boolean(errors.name)}
-                  />
-                  {touched && errors.name && (
-                    <p className="mt-2 font-sans text-[12px] text-blue">{errors.name}</p>
-                  )}
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="sr-only">
-                    {t.contactPage.email}
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    className={field}
-                    placeholder={t.contactPage.email}
-                    value={values.email}
-                    onChange={set("email")}
-                    aria-invalid={Boolean(errors.email)}
-                  />
-                  {touched && errors.email && (
-                    <p className="mt-2 font-sans text-[12px] text-blue">{errors.email}</p>
-                  )}
-                </div>
-
-                <div>
-                  <label htmlFor="organisation" className="sr-only">
-                    {t.contactPage.organisation}
-                  </label>
-                  <input
-                    id="organisation"
-                    name="organisation"
-                    className={field}
-                    placeholder={t.contactPage.organisation}
-                    value={values.organisation}
-                    onChange={set("organisation")}
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="sr-only">
-                    {t.contactPage.message}
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    className={`${field} resize-none`}
-                    placeholder={t.contactPage.message}
-                    value={values.message}
-                    onChange={set("message")}
-                    aria-invalid={Boolean(errors.message)}
-                  />
-                  {touched && errors.message && (
-                    <p className="mt-2 font-sans text-[12px] text-blue">{errors.message}</p>
-                  )}
-                </div>
-
-                <button
-                  type="submit"
-                  className="bg-ink px-7 py-4 font-sans text-[14px] font-medium text-soft-white transition-opacity hover:opacity-85"
-                >
-                  {t.contactPage.submit}
-                </button>
-              </form>
+              <div className="mt-10">
+                <ContactForm showOrganisation />
+              </div>
             </Reveal>
           </div>
         </section>

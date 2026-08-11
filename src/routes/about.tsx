@@ -8,22 +8,15 @@
  * Les providers (`ThemeProvider`, `I18nProvider`) sont posés une seule fois
  * dans `__root.tsx` : cette route ne fait que rendre ses sections.
  */
-import { Link, createFileRoute } from "@tanstack/react-router";
-import { useEffect } from "react";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
+import { PageBreadcrumb } from "@/components/site/PageBreadcrumb";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 import { useI18n } from "@/lib/i18n";
+import { useDocumentTitle } from "@/lib/useDocumentTitle";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -44,33 +37,15 @@ function About() {
 }
 
 function AboutContent() {
-  const { t, locale } = useI18n();
+  const { t } = useI18n();
 
-  useEffect(() => {
-    document.title = locale === "fr" ? "Qui sommes-nous · Inference" : "Who we are · Inference";
-  }, [locale]);
+  useDocumentTitle("Qui sommes-nous · Inference", "Who we are · Inference");
 
   return (
     <>
       <Header />
       <main>
-        <section className="border-b border-light-gray bg-bg-light py-7">
-          <div className="shell">
-            <Breadcrumb>
-              <BreadcrumbList className="font-sans text-[13px] text-text-muted">
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild className="hover:text-ink">
-                    <Link to="/">{t.nav.home}</Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="text-light-gray" />
-                <BreadcrumbItem>
-                  <BreadcrumbPage className="text-ink">{t.about.breadcrumb}</BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          </div>
-        </section>
+        <PageBreadcrumb current={t.about.breadcrumb} />
 
         <section className="relative flex min-h-[calc(100svh-140px)] flex-col items-center justify-center overflow-hidden bg-bg-light">
           <div className="shell flex w-full flex-col items-center">
@@ -199,12 +174,12 @@ function AboutContent() {
               </p>
             </Reveal>
             <Reveal delay={120}>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="mt-10 inline-block bg-ink px-8 py-4 font-sans text-[14px] font-medium text-soft-white transition-opacity hover:opacity-85"
               >
                 {t.about.ctaLink}
-              </a>
+              </Link>
             </Reveal>
           </div>
         </section>

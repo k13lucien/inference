@@ -1,3 +1,17 @@
+/**
+ * Button — bouton shadcn/ui (Radix Slot + class-variance-authority).
+ *
+ * Fournit des variantes (`default`, `outline`, `ghost`, `link`, …) et des tailles
+ * (`default`, `sm`, `lg`, `icon`) via `cva`. Avec `<Button asChild>`, l'élément
+ * rendu devient celui passé en enfant (ex. un `<a>` / `<Link>`).
+ *
+ * ⚠️ Design system : les classes par défaut référencent des tokens shadcn
+ * (`bg-primary`, `text-primary-foreground`, `ring-ring`, …) non définis dans
+ * `src/styles.css`. Aux points d'usage, on surcharge donc toujours l'apparence
+ * par `className` (ex. `ContactForm` : `bg-ink text-soft-white …`).
+ *
+ * `buttonVariants` est aussi exporté pour composer le style hors `<button>`.
+ */
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";

@@ -312,15 +312,6 @@ export const dict = {
         ],
       },
     },
-    contact: {
-      title: "Parlons de ce qui vous préoccupe.",
-      name: "Nom",
-      email: "Email professionnel",
-      message: "Votre contexte, en quelques lignes",
-      submit: "Envoyer",
-      required: "Ce champ est requis.",
-      invalidEmail: "Adresse email invalide.",
-    },
     contactPage: {
       breadcrumb: "Contact",
       title: "Parlons de ce qui vous préoccupe.",
@@ -341,6 +332,7 @@ export const dict = {
       submit: "Envoyer le message",
       required: "Ce champ est requis.",
       invalidEmail: "Adresse email invalide.",
+      success: "Message envoyé. Nous vous répondrons sous 48 h.",
     },
     footer: {
       tagline:
@@ -633,15 +625,6 @@ export const dict = {
         ],
       },
     },
-    contact: {
-      title: "Let’s talk about what’s on your mind.",
-      name: "Name",
-      email: "Work email",
-      message: "Your context, in a few lines",
-      submit: "Send",
-      required: "This field is required.",
-      invalidEmail: "Invalid email address.",
-    },
     contactPage: {
       breadcrumb: "Contact",
       title: "Let’s talk about what’s on your mind.",
@@ -662,6 +645,7 @@ export const dict = {
       submit: "Send message",
       required: "This field is required.",
       invalidEmail: "Invalid email address.",
+      success: "Message sent. We'll get back to you within 48 hours.",
     },
     footer: {
       tagline:

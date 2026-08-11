@@ -1,3 +1,9 @@
+/**
+ * Textarea — zone de texte multiligne shadcn/ui.
+ *
+ * Même remarque que `Input` : dans `ContactForm` la classe par défaut est
+ * surchargée pour conserver le style « soulignement » du site.
+ */
 import * as React from "react";
 
 import { cn } from "@/lib/utils";

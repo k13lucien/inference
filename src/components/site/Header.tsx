@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { Link } from "@tanstack/react-router";
+
 import { useI18n } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
 
@@ -8,11 +10,14 @@ export function Header() {
   const { t, locale, toggleLocale } = useI18n();
   const { theme, toggleTheme } = useTheme();
 
-  const nav = [
-    { href: "/services", label: t.nav.offers },
-    { href: "/about", label: t.nav.about },
-    { label: t.nav.realizations, disabled: true },
-    { href: "/contact", label: t.nav.contact },
+  const nav: Array<
+    | { to: "/" | "/services" | "/about" | "/contact"; label: string; disabled?: undefined }
+    | { to: undefined; label: string; disabled: true }
+  > = [
+    { to: "/services", label: t.nav.offers },
+    { to: "/about", label: t.nav.about },
+    { to: undefined, label: t.nav.realizations, disabled: true },
+    { to: "/contact", label: t.nav.contact },
   ];
 
   const controlBase =
@@ -72,9 +77,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-light-gray bg-bg-light/90 backdrop-blur-[6px]">
       <div className="shell flex h-[76px] items-center justify-between">
-        <a href="/" className="font-serif text-[19px] font-semibold text-ink">
+        <Link to="/" className="font-serif text-[19px] font-semibold text-ink">
           Inference <span className="text-text-muted">·</span> Your Tech Partner
-        </a>
+        </Link>
 
         <nav aria-label={t.nav.main} className="hidden items-center gap-9 md:flex">
           {nav.map((item) =>
@@ -88,23 +93,23 @@ export function Header() {
                 {item.label}
               </span>
             ) : (
-              <a
-                key={item.href}
-                href={item.href}
+              <Link
+                key={item.to}
+                to={item.to}
                 className="group relative font-sans text-[14px] text-text-secondary transition-colors hover:text-ink"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 h-px w-0 bg-blue transition-[width] duration-200 group-hover:w-full" />
-              </a>
+              </Link>
             ),
           )}
           {controls}
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="border border-ink px-4 py-2 font-sans text-[13px] font-medium text-ink transition-colors hover:bg-ink hover:text-soft-white"
           >
             {t.nav.cta}
-          </a>
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3 md:hidden">
@@ -124,10 +129,7 @@ export function Header() {
         <nav aria-label={t.nav.mobile} className="border-t border-light-gray bg-bg-light md:hidden">
           <ul className="shell flex flex-col py-3">
             {nav.map((item) => (
-              <li
-                key={item.href ?? item.label}
-                className="border-b border-light-gray last:border-0"
-              >
+              <li key={item.to ?? item.label} className="border-b border-light-gray last:border-0">
                 {item.disabled ? (
                   <span
                     aria-disabled="true"
@@ -136,13 +138,13 @@ export function Header() {
                     {item.label}
                   </span>
                 ) : (
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.to}
                     onClick={() => setOpen(false)}
                     className="block py-3.5 font-sans text-[15px] text-text-secondary"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 )}
               </li>
             ))}

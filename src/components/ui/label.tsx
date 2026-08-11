@@ -1,3 +1,10 @@
+/**
+ * Label — `<label>` shadcn/ui basé sur `@radix-ui/react-label`.
+ *
+ * Utilisé par le wrapper `Form` (`FormLabel`) et, en `sr-only`, par
+ * `ContactForm` : le label reste accessible aux lecteurs d'écran tandis que la
+ * consigne visuelle est portée par le `placeholder`.
+ */
 "use client";
 
 import * as React from "react";

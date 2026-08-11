@@ -84,7 +84,6 @@ export function Services() {
                     </span>
                   </span>
                 </button>
-
               );
             })}
           </div>
@@ -138,11 +137,9 @@ export function Services() {
                   </div>
                 </div>
               </div>
-
             );
           })}
         </div>
-
       </div>
     </section>
   );
