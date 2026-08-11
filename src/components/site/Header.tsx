@@ -146,13 +146,16 @@ export function Header() {
         <nav aria-label={t.nav.mobile} className="border-t border-light-gray bg-bg-light md:hidden">
           <ul className="shell flex flex-col py-3">
             {nav.map((item) => (
-              <li key={item.to ?? item.label} className="border-b border-light-gray last:border-0">
+              <li key={item.to ?? item.label} className="border-b border-light-gray">
                 {item.disabled ? (
                   <span
                     aria-disabled="true"
-                    className="block py-3.5 font-sans text-[15px] text-text-muted opacity-55"
+                    className="flex items-center gap-3 py-3.5 font-sans text-[15px] text-text-muted"
                   >
                     {item.label}
+                    <span className="border border-light-gray px-1.5 py-px font-sans text-[9px] font-medium uppercase tracking-[0.16em]">
+                      {t.nav.soon}
+                    </span>
                   </span>
                 ) : (
                   <Link
@@ -165,6 +168,15 @@ export function Header() {
                 )}
               </li>
             ))}
+            <li className="pt-5 pb-2">
+              <Link
+                to="/contact"
+                onClick={() => setOpen(false)}
+                className="block bg-ink px-4 py-3.5 text-center font-sans text-[14px] font-medium text-soft-white"
+              >
+                {t.nav.cta}
+              </Link>
+            </li>
           </ul>
         </nav>
       )}
