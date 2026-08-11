@@ -84,8 +84,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-light-gray bg-bg-light/90 backdrop-blur-[6px]">
       <div className="shell flex h-[76px] items-center justify-between">
-        <Link to="/" className="font-serif text-[19px] font-semibold text-ink">
-          Inference <span className="text-text-muted">·</span> Your Tech Partner
+        <Link
+          to="/"
+          className="font-serif text-[19px] font-semibold whitespace-nowrap text-ink max-[420px]:text-[17px]"
+        >
+          Inference
+          <span className="max-[420px]:hidden">
+            {" "}
+            <span className="text-text-muted">·</span> Your Tech Partner
+          </span>
         </Link>
 
         <nav aria-label={t.nav.main} className="hidden items-center gap-9 md:flex">
@@ -94,10 +101,13 @@ export function Header() {
               <span
                 key={item.label}
                 aria-disabled="true"
-                title="Non disponible actuellement"
-                className="font-sans text-[14px] text-text-muted opacity-55"
+                title={t.nav.soonTitle}
+                className="flex items-baseline gap-2 font-sans text-[14px] text-text-muted"
               >
                 {item.label}
+                <span className="border border-light-gray px-1.5 py-px font-sans text-[9px] font-medium uppercase tracking-[0.16em] text-text-muted">
+                  {t.nav.soon}
+                </span>
               </span>
             ) : (
               <Link
