@@ -83,10 +83,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-light-gray bg-bg-light/90 backdrop-blur-[6px]">
-      <div className="shell flex h-[76px] items-center justify-between">
+      <div className="shell flex h-[76px] items-center justify-between gap-10">
         <Link
           to="/"
-          className="font-serif text-[19px] font-semibold whitespace-nowrap text-ink max-[420px]:text-[17px]"
+          className="shrink-0 font-serif text-[19px] font-semibold whitespace-nowrap text-ink max-[420px]:text-[17px]"
         >
           Inference
           <span className="max-[420px]:hidden">
