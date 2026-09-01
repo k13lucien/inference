@@ -346,6 +346,8 @@ export const dict = {
       required: "Ce champ est requis.",
       invalidEmail: "Adresse email invalide.",
       success: "Message envoyé. Nous vous répondrons sous 48 h.",
+      error: "Échec de l'envoi. Réessayez dans un instant.",
+      sending: "Envoi…",
     },
     footer: {
       tagline:
@@ -672,6 +674,8 @@ export const dict = {
       required: "This field is required.",
       invalidEmail: "Invalid email address.",
       success: "Message sent. We'll get back to you within 48 hours.",
+      error: "Failed to send. Please try again shortly.",
+      sending: "Sending…",
     },
     footer: {
       tagline:
