@@ -52,9 +52,17 @@ export function ContactForm({ showOrganisation = false }: { showOrganisation?: b
   });
 
   const onSubmit = async (values: FormValues) => {
-    // Backend à brancher ici (#4) : remplacer par un appel de server function.
-    console.log("contact", values);
-    toast.success(t.contactPage.success);
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      if (!res.ok) throw new Error("send failed");
+      toast.success(t.contactPage.success);
+    } catch {
+      toast.error(t.contactPage.error);
+    }
   };
 
   return (
@@ -134,9 +142,10 @@ export function ContactForm({ showOrganisation = false }: { showOrganisation?: b
 
         <Button
           type="submit"
-          className="h-auto rounded-none bg-ink px-7 py-4 font-sans text-[14px] font-medium text-soft-white transition-opacity hover:bg-ink hover:opacity-85"
+          disabled={form.formState.isSubmitting}
+          className="h-auto rounded-none bg-ink px-7 py-4 font-sans text-[14px] font-medium text-soft-white transition-opacity hover:bg-ink hover:opacity-85 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {t.contactPage.submit}
+          {form.formState.isSubmitting ? t.contactPage.sending : t.contactPage.submit}
         </Button>
       </form>
     </Form>
