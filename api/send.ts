@@ -11,18 +11,20 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const { name, email, message } = req.body;
+    const { name, email, message, organisation } = req.body;
 
     if (!name || !email || !message) {
       return res.status(400).json({ error: "Champs manquants" });
     }
+
+    const organisationText = organisation ? `\nOrganisation: ${organisation}` : "";
 
     const data = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>", // Remplacez par votre domaine une fois vérifié
       to: ["contact@inference.bf"], // L'adresse où vous souhaitez recevoir le message
       subject: `Nouveau message de ${name}`,
       replyTo: email,
-      text: `Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      text: `Nom: ${name}\nEmail: ${email}${organisationText}\n\nMessage:\n${message}`,
     });
 
     return res.status(200).json({ success: true, data });
