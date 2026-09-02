@@ -122,6 +122,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
+    scripts: [
+      {
+        src: "https://plausible.io/js/script.js",
+        defer: true,
+        "data-domain": "inference.bf",
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
