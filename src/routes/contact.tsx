@@ -18,17 +18,16 @@ import { Reveal } from "@/components/site/Reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
 import { useI18n } from "@/lib/i18n";
 import { useDocumentTitle } from "@/lib/useDocumentTitle";
+import { canonicalLink, seoMeta } from "@/lib/seo";
+
+const title = "Contact · Inference — Discutons de votre projet";
+const description =
+  "Contactez Inference pour votre projet de transformation numérique : conseil, ingénierie logicielle, communication et formation. Réponse sous 48h.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
-    meta: [
-      { title: "Inference · Contact" },
-      { name: "description", content: "Inference contact page." },
-      { property: "og:title", content: "Inference · Contact" },
-      { property: "og:description", content: "Inference contact page." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+    meta: seoMeta({ title, description, path: "/contact" }),
+    links: canonicalLink("/contact"),
   }),
   component: Contact,
 });

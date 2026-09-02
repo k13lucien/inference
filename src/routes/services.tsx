@@ -20,17 +20,16 @@ import { Reveal } from "@/components/site/Reveal";
 import { Stack } from "@/components/site/Stack";
 import { useI18n } from "@/lib/i18n";
 import { useDocumentTitle } from "@/lib/useDocumentTitle";
+import { canonicalLink, seoMeta } from "@/lib/seo";
+
+const title = "Offres · Inference — Conseil, ingénierie, communication & formation";
+const description =
+  "Découvrez les offres d'Inference : conseil et diagnostic, ingénierie logicielle, communication digitale et formation, pour accompagner la transformation numérique de votre organisation.";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
-    meta: [
-      { title: "Inference · Services" },
-      { name: "description", content: "Inference offers page." },
-      { property: "og:title", content: "Inference · Services" },
-      { property: "og:description", content: "Inference offers page." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+    meta: seoMeta({ title, description, path: "/services" }),
+    links: canonicalLink("/services"),
   }),
   component: Services,
 });

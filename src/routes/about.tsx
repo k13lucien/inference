@@ -17,17 +17,16 @@ import { Reveal } from "@/components/site/Reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
 import { useI18n } from "@/lib/i18n";
 import { useDocumentTitle } from "@/lib/useDocumentTitle";
+import { canonicalLink, seoMeta } from "@/lib/seo";
+
+const title = "Qui sommes-nous · Inference — Comprendre avant de construire";
+const description =
+  "Inference décode la complexité métier avant de la traduire en système : notre mission, notre positionnement et nos principes pour des solutions numériques durables.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
-    meta: [
-      { title: "Inference · About" },
-      { name: "description", content: "Inference about page." },
-      { property: "og:title", content: "Inference · About" },
-      { property: "og:description", content: "Inference about page." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+    meta: seoMeta({ title, description, path: "/about" }),
+    links: canonicalLink("/about"),
   }),
   component: About,
 });

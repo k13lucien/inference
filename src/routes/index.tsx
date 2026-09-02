@@ -21,6 +21,7 @@ import { Region } from "@/components/site/Region";
 import { Positioning } from "@/components/site/Positioning";
 import { ContactCta } from "@/components/site/ContactCta";
 import { Footer } from "@/components/site/Footer";
+import { SITE_URL, OG_IMAGE, canonicalLink, seoMeta } from "@/lib/seo";
 
 const title = "Inference · Conseil & ingénierie logicielle";
 const description =
@@ -28,13 +29,25 @@ const description =
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+    meta: seoMeta({ title, description, path: "/" }),
+    links: canonicalLink("/"),
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "Inference",
+          description,
+          url: SITE_URL,
+          email: "contact@inference.bf",
+          image: OG_IMAGE,
+          areaServed: "BF",
+          priceRange: "€€",
+          slogan: "Decode the Complex.",
+          sameAs: ["https://www.linkedin.com"],
+        }),
+      },
     ],
   }),
   component: Index,
