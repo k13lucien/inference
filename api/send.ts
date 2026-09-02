@@ -20,8 +20,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const organisationText = organisation ? `\nOrganisation: ${organisation}` : "";
 
     const data = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>", // Remplacez par votre domaine une fois vérifié
-      to: ["contact@inference.bf"], // L'adresse où vous souhaitez recevoir le message
+      from: "Contact Form <onboarding@resend.dev>",
+      to: ["techinference1@gmail.com"], // L'adresse où vous souhaitez recevoir le message
       subject: `Nouveau message de ${name}`,
       replyTo: email,
       text: `Nom: ${name}\nEmail: ${email}${organisationText}\n\nMessage:\n${message}`,
