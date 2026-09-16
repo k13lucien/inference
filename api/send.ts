@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { Resend } from "resend";
 
-const resend = new Resend(process.env["RESEND_API_KEY"]);
+const apiKey = process.env["MAILBRIDGE_API_KEY"] ?? "";
+const apiUrl = process.env["MAILBRIDGE_API_URL"] ?? "";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   // Bloquer les requêtes autres que POST
@@ -12,6 +12,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   try {
     const { name, email, message, organisation } = req.body;
+    
+    if(!process.env["MAILBRIDGE_API_KEY"]) {
+      console.error("API Key is not found in environment");
+      return res.status(500).json({ error: "Server configuration error" });
+    }
+
+    if(!apiUrl) {
+      console.error("API URL is not found in environment");
+      return res.status(500).json({ error: "Server configuration error" });
+    }
 
     if (!name || !email || !message) {
       return res.status(400).json({ error: "Champs manquants" });
@@ -19,13 +29,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const organisationText = organisation ? `\nOrganisation: ${organisation}` : "";
 
-    const data = await resend.emails.send({
+    const data = await fetch(     
+      apiUrl,
+      {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-API-KEY": `${apiKey}`,
+        Authorization: `Bearer ${process.env["MAILBRIDGE_API_KEY"]}`,
+      },
+      body: JSON.stringify({
+      
       from: "Contact Form <onboarding@resend.dev>",
-      to: ["techinference1@gmail.com"], // L'adresse où vous souhaitez recevoir le message
+      to: ["techinference1@gmail.com"], 
       subject: `Nouveau message de ${name}`,
       replyTo: email,
       text: `Nom: ${name}\nEmail: ${email}${organisationText}\n\nMessage:\n${message}`,
-    });
+    })});
 
     return res.status(200).json({ success: true, data });
   } catch (error) {
