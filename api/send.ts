@@ -27,9 +27,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(400).json({ error: "Champs manquants" });
     }
 
-    const organisationText = organisation ? `\nOrganisation: ${organisation}` : "";
-
-    const data = await fetch(     
+    const data = await fetch(
       apiUrl,
       {
       method: "POST",
@@ -39,13 +37,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         Authorization: `Bearer ${process.env["MAILBRIDGE_API_KEY"]}`,
       },
       body: JSON.stringify({
-      
-      from: "Contact Form <onboarding@resend.dev>",
-      to: ["techinference1@gmail.com"], 
-      subject: `Nouveau message de ${name}`,
-      replyTo: email,
-      text: `Nom: ${name}\nEmail: ${email}${organisationText}\n\nMessage:\n${message}`,
-    })});
+        from: "onboarding@resend.dev",
+        to: ["contact@inference.bf"],
+        subject: `Nouveau message de ${name}`,
+        message: `Nom: ${name}\nEmail: ${email}${organisation ? `\nOrganisation: ${organisation}` : ""}\n\nMessage:\n${message}`,
+        name: name,
+        organisation: organisation || "",
+      })});
 
     return res.status(200).json({ success: true, data });
   } catch (error) {
